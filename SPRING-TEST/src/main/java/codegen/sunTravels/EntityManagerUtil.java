@@ -1,4 +1,4 @@
-package codegen.sunTravels;
+package main.java.codegen.sunTravels;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;

@@ -1,3 +1,8 @@
-F:\CODING\SPRING-TEST\src\main\java\codegen\sunTravels\Hotel\HotelBean.java
-F:\CODING\SPRING-TEST\src\main\java\codegen\sunTravels\Core\Core.java
-F:\CODING\SPRING-TEST\src\main\java\codegen\sunTravels\Config\HotelConfig.java
+E:\Git\Sun_Travels\SPRING-TEST\src\main\java\codegen\sunTravels\Config\SpringConfig.java
+E:\Git\Sun_Travels\SPRING-TEST\src\main\java\codegen\sunTravels\Services\HotelService.java
+E:\Git\Sun_Travels\SPRING-TEST\src\main\java\codegen\sunTravels\DAO\HotelDAO.java
+E:\Git\Sun_Travels\SPRING-TEST\src\main\java\codegen\sunTravels\Core\Core.java
+E:\Git\Sun_Travels\SPRING-TEST\src\main\java\codegen\sunTravels\Services\HotelServiceImpl.java
+E:\Git\Sun_Travels\SPRING-TEST\src\main\java\codegen\sunTravels\DAO\HotelDAOImpl.java
+E:\Git\Sun_Travels\SPRING-TEST\src\main\java\codegen\sunTravels\Entities\Hotel.java
+E:\Git\Sun_Travels\SPRING-TEST\src\main\java\codegen\sunTravels\EntityManagerUtil.java
