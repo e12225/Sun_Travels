@@ -4,16 +4,18 @@
 
     <persistence-unit name="sun-travels" transaction-type="RESOURCE_LOCAL">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-        <class>main.java.codegen.sunTravels.Entities.Hotel</class>
+        <class>codegen.sunTravels.Entities.Hotel</class>
         <properties>
             <property name="javax.persistence.jdbc.driver" value="oracle.jdbc.driver.OracleDriver" />
             <property name="javax.persistence.jdbc.url" value="jdbc:oracle:thin:@192.148.27.140:1521:database"/>
-            <property name="javax.persistence.jdbc.user" value="sys"/>
+            <property name="javax.persistence.jdbc.user" value="SYSTEM"/>
             <property name="javax.persistence.jdbc.password" value="mubasher2016"/>
             <property name="hibernate.connection.pool_size" value="1"/>
             <property name="hibernate.dialect" value="org.hibernate.dialect.OracleDialect"/>
             <property name="show_sql" value="true"/>
             <property name="hibernate.temp.use_jdbc_metadata_defaults" value="false"/>
+            <property name="openjpa.ConnectionURL" value="jdbc:oracle:thin:@localhost:1521:XE"/>
+            <property name="openjpa.ConnectionDriverName" value="oracle.jdbc.driver.OracleDriver"/>
         </properties>
     </persistence-unit>
 </persistence>

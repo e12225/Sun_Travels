@@ -1,14 +1,19 @@
-package main.java.codegen.sunTravels.Services;
+package codegen.sunTravels.Services;
 
-import main.java.codegen.sunTravels.Entities.Hotel;
+import codegen.sunTravels.Entities.Hotel;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
 /**
- * Created by DELL on 11/9/2017.
+ * @Author - Subhani
+ * @Date - 11/9/2017
  */
 public interface HotelService {
 
-    void addHotel(Hotel hotel);
+    void addNewHotel(Hotel hotel);
+
+    List<Hotel> getHotelByNameOrLetter(String str);
+
     List<Hotel> getHotelList();
 }

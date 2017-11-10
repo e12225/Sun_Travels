@@ -1,36 +1,46 @@
-package main.java.codegen.sunTravels.DAO;
+package codegen.sunTravels.DAO;
 
-import main.java.codegen.sunTravels.Entities.Hotel;
-import org.springframework.stereotype.Repository;
-
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-import javax.persistence.criteria.CriteriaQuery;
-import javax.persistence.criteria.Root;
+import codegen.sunTravels.Entities.Hotel;
+import codegen.sunTravels.Repos.HotelRepository;
+import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Stream;
 
 /**
- * Created by DELL on 11/9/2017.
+ * @Author - Subhani
+ * @Date - 11/9/2017
  */
-@Repository
+@Component
 public class HotelDAOImpl implements HotelDAO {
 
-    @PersistenceContext
-    EntityManager em;
+    Logger logger = Logger.getLogger(HotelDAOImpl.class);
+
+    @Autowired
+    private HotelRepository hotelRepository;
 
     @Override
     public void addHotel(Hotel hotel) {
-        em.persist(hotel);
+        logger.info("New hotel entity is about to be persisted");
+        this.hotelRepository.save(hotel);
+    }
+
+    @Override
+    public List<Hotel> getHotelByNameOrLetter(String str) {
+        logger.info("Hotel is to be returned now");
+        List<Hotel> filteredHotelList = new ArrayList<>();
+
+        Stream<Hotel> hotelStream = this.hotelRepository.findByLetterOrName(str);
+        hotelStream.forEach(x ->filteredHotelList.add(x));
+        return filteredHotelList;
     }
 
     @Override
     public List<Hotel> getHotelList() {
+        logger.info("Hotel list is to be returned now");
+        return this.hotelRepository.findAll();
 
-        CriteriaQuery<Hotel> criteriaQuery = em.getCriteriaBuilder().createQuery(Hotel.class);
-        @SuppressWarnings("unused") //search what is this annotation
-        Root<Hotel> root = criteriaQuery.from(Hotel.class);
-        return em.createQuery(criteriaQuery).getResultList();
     }
-
-
 }

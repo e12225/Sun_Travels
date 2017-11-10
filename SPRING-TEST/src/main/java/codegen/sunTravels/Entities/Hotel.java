@@ -1,33 +1,37 @@
-package main.java.codegen.sunTravels.Entities;
+package codegen.sunTravels.Entities;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 /**
  * @Author - Subhani
  * @Date - 08/11/2017
  */
 @Entity
-@Table(name = "SS_HOTEL")
+@Table(name = "SS_HOTEL", schema = "SYSTEM", catalog = "")
 public class Hotel {
 
     @Id
+    @GeneratedValue
     @Column(name = "HOTEL_ID")
-    String hotelID;
+    Integer hotelID;
+
+    @Basic
     @Column(name = "HOTEL_NAME")
     String hotelName;
+
+    @Basic
     @Column(name = "HOTEL_ADDRESS")
     String hotelAddress;
+
+    @Basic
     @Column(name = "HOTEL_TELEPHONE_NUMBER")
     String hotelPhoneNumber;
 
-    public String getHotelID() {
+    public Integer getHotelID() {
         return hotelID;
     }
 
-    public void setHotelID(String hotelID) {
+    public void setHotelID(Integer hotelID) {
         this.hotelID = hotelID;
     }
 
@@ -52,13 +56,6 @@ public class Hotel {
     }
 
     public void setHotelPhoneNumber(String hotelPhoneNumber) {
-        this.hotelPhoneNumber = hotelPhoneNumber;
-    }
-
-    public Hotel(String hotelID, String hotelName, String hotelAddress, String hotelPhoneNumber) {
-        this.hotelID = hotelID;
-        this.hotelName = hotelName;
-        this.hotelAddress = hotelAddress;
         this.hotelPhoneNumber = hotelPhoneNumber;
     }
 

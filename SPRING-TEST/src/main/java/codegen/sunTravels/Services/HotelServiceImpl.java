@@ -1,31 +1,40 @@
-package main.java.codegen.sunTravels.Services;
+package codegen.sunTravels.Services;
 
-import main.java.codegen.sunTravels.DAO.HotelDAO;
-import main.java.codegen.sunTravels.Entities.Hotel;
+import codegen.sunTravels.DAO.HotelDAO;
+import codegen.sunTravels.Entities.Hotel;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.transaction.Transactional;
 import java.util.List;
 
 /**
- * Created by DELL on 11/9/2017.
+ * @Author - Subhani
+ * @Date - 11/9/2017
  */
 @Service
 public class HotelServiceImpl implements HotelService {
 
+    Logger logger = Logger.getLogger(HotelServiceImpl.class);
+
     @Autowired
     private HotelDAO hotelDAO;
 
-    @Transactional
     @Override
-    public void addHotel(Hotel hotel) {
-        hotelDAO.addHotel(hotel);
+    public void addNewHotel(Hotel hotel) {
+        logger.info("DAO class addNewHotel method is called");
+        this.hotelDAO.addHotel(hotel);
     }
 
-    //@Transactional(readOnly = true)
+    @Override
+    public List<Hotel> getHotelByNameOrLetter(String str) {
+        logger.info("DAO class getHotelListByNameOrLetter method is called");
+        return this.hotelDAO.getHotelByNameOrLetter(str);
+    }
+
     @Override
     public List<Hotel> getHotelList() {
-        return hotelDAO.getHotelList();
+        logger.info("DAO class getHotelList method is called");
+        return this.hotelDAO.getHotelList();
     }
 }
