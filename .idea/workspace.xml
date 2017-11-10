@@ -1,41 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e83d8543-ad6b-4939-9537-6b1453058ab3" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SPRING-TEST/src/main/java/codegen/sunTravels/Config/SpringConfig.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SPRING-TEST/src/main/java/codegen/sunTravels/Core/Core.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SPRING-TEST/src/main/java/codegen/sunTravels/EntityManagerUtil.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SPRING-TEST/src/main/resources/application.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SPRING-TEST/target/classes/main/java/codegen/sunTravels/Config/SpringConfig.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SPRING-TEST/target/classes/main/java/codegen/sunTravels/Core/Core.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SPRING-TEST/target/classes/main/java/codegen/sunTravels/DAO/HotelDAO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SPRING-TEST/target/classes/main/java/codegen/sunTravels/DAO/HotelDAOImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SPRING-TEST/target/classes/main/java/codegen/sunTravels/Entities/Hotel.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SPRING-TEST/target/classes/main/java/codegen/sunTravels/EntityManagerUtil.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SPRING-TEST/target/classes/main/java/codegen/sunTravels/Services/HotelService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SPRING-TEST/target/classes/main/java/codegen/sunTravels/Services/HotelServiceImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SPRING-TEST/target/sunTravels-1.0-SNAPSHOT/WEB-INF/classes/main/java/codegen/sunTravels/Config/SpringConfig.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SPRING-TEST/target/sunTravels-1.0-SNAPSHOT/WEB-INF/classes/main/java/codegen/sunTravels/Core/Core.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SPRING-TEST/target/sunTravels-1.0-SNAPSHOT/WEB-INF/classes/main/java/codegen/sunTravels/DAO/HotelDAO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SPRING-TEST/target/sunTravels-1.0-SNAPSHOT/WEB-INF/classes/main/java/codegen/sunTravels/DAO/HotelDAOImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SPRING-TEST/target/sunTravels-1.0-SNAPSHOT/WEB-INF/classes/main/java/codegen/sunTravels/Entities/Hotel.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SPRING-TEST/target/sunTravels-1.0-SNAPSHOT/WEB-INF/classes/main/java/codegen/sunTravels/Services/HotelService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SPRING-TEST/target/sunTravels-1.0-SNAPSHOT/WEB-INF/classes/main/java/codegen/sunTravels/Services/HotelServiceImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SPRING-TEST/target/sunTravels-1.0-SNAPSHOT/WEB-INF/lib/log4j-api-2.9.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SPRING-TEST/target/sunTravels-1.0-SNAPSHOT/WEB-INF/lib/log4j-core-2.9.1.jar" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPRING-TEST/target/sunTravels-1.0-SNAPSHOT.war" afterPath="$PROJECT_DIR$/SPRING-TEST/target/sunTravels-1.0-SNAPSHOT.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPRING-TEST/pom.xml" afterPath="$PROJECT_DIR$/SPRING-TEST/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPRING-TEST/src/main/java/codegen/sunTravels/DAO/HotelDAO.java" afterPath="$PROJECT_DIR$/SPRING-TEST/src/main/java/codegen/sunTravels/DAO/HotelDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPRING-TEST/src/main/java/codegen/sunTravels/DAO/HotelDAOImpl.java" afterPath="$PROJECT_DIR$/SPRING-TEST/src/main/java/codegen/sunTravels/DAO/HotelDAOImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPRING-TEST/src/main/java/codegen/sunTravels/Entities/Hotel.java" afterPath="$PROJECT_DIR$/SPRING-TEST/src/main/java/codegen/sunTravels/Entities/Hotel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPRING-TEST/src/main/java/codegen/sunTravels/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/SPRING-TEST/src/main/java/codegen/sunTravels/META-INF/persistence.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPRING-TEST/src/main/java/codegen/sunTravels/Services/HotelService.java" afterPath="$PROJECT_DIR$/SPRING-TEST/src/main/java/codegen/sunTravels/Services/HotelService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPRING-TEST/src/main/java/codegen/sunTravels/Services/HotelServiceImpl.java" afterPath="$PROJECT_DIR$/SPRING-TEST/src/main/java/codegen/sunTravels/Services/HotelServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPRING-TEST/target/classes/application.properties" afterPath="$PROJECT_DIR$/SPRING-TEST/target/classes/application.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPRING-TEST/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/SPRING-TEST/target/maven-archiver/pom.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPRING-TEST/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/SPRING-TEST/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPRING-TEST/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/SPRING-TEST/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
-    </list>
+    <list default="true" id="e83d8543-ad6b-4939-9537-6b1453058ab3" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/SPRING-TEST/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -45,79 +11,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="HotelController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SPRING-TEST/src/main/java/codegen/sunTravels/Controllers/HotelController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="969">
-              <caret line="57" column="52" lean-forward="false" selection-start-line="57" selection-start-column="52" selection-end-line="57" selection-end-column="52" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#699#700#0" expanded="true" />
-                <element signature="e#749#750#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Hotel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SPRING-TEST/src/main/java/codegen/sunTravels/Entities/Hotel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HotelService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SPRING-TEST/src/main/java/codegen/sunTravels/Services/HotelService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HotelServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SPRING-TEST/src/main/java/codegen/sunTravels/Services/HotelServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="26" column="5" lean-forward="false" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Initializer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SPRING-TEST/src/main/java/codegen/sunTravels/Initializer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#305#306#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/SPRING-TEST/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="28" column="21" lean-forward="true" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -484,7 +378,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -499,7 +392,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15458423" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15458423" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -648,14 +541,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SPRING-TEST/src/main/java/codegen/sunTravels/Entities/Hotel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SPRING-TEST/src/main/java/codegen/sunTravels/EntityManagerUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -664,20 +549,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SPRING-TEST/src/main/java/codegen/sunTravels/Services/HotelServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="5" lean-forward="false" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/tomcat-jdbc/8.0.32/tomcat-jdbc-8.0.32.jar!/org/apache/tomcat/jdbc/pool/PooledConnection.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="316">
           <caret line="112" column="0" lean-forward="false" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SPRING-TEST/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="40" lean-forward="true" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
           <folding />
         </state>
       </provider>
@@ -693,6 +576,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/SPRING-TEST/src/main/java/codegen/sunTravels/Services/HotelServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="5" lean-forward="false" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/SPRING-TEST/src/main/java/codegen/sunTravels/Services/HotelService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -700,6 +593,14 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SPRING-TEST/src/main/java/codegen/sunTravels/Entities/Hotel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -712,14 +613,6 @@
             <element signature="e#699#700#0" expanded="true" />
             <element signature="e#749#750#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SPRING-TEST/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="21" lean-forward="true" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
