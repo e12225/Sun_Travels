@@ -1,8 +1,0 @@
-codegen\sunTravels\Entities\Hotel.class
-main\java\codegen\sunTravels\EntityManagerUtil.class
-codegen\sunTravels\DAO\HotelDAO.class
-codegen\sunTravels\Config\SpringConfig.class
-codegen\sunTravels\DAO\HotelDAOImpl.class
-codegen\sunTravels\Services\HotelService.class
-codegen\sunTravels\Core\Core.class
-codegen\sunTravels\Services\HotelServiceImpl.class
