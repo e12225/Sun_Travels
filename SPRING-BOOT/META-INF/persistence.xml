@@ -10,6 +10,8 @@
         <class>com.codegen.suntravels.entities.Customer</class>
         <class>com.codegen.suntravels.entities.CallCenterAgent</class>
         <class>com.codegen.suntravels.entities.RoomType</class>
+        <class>com.codegen.suntravels.entities.Contract</class>
+        <class>com.codegen.suntravels.entities.ContractDetails</class>
 
         <properties>
             <property name="javax.persistence.jdbc.url" value="jdbc:oracle:thin:@localhost:1521:XE"/>
