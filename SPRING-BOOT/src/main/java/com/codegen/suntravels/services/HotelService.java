@@ -13,8 +13,8 @@ public class HotelService {
     @Autowired
     private HotelDAO hotelDAO;
 
-    public List<Hotel> getHotelsList(){
-        return this.hotelDAO.getHotelsList();
+    public List<Hotel> getHotelList(){
+        return this.hotelDAO.getHotelList();
     }
 
     public void addHotel(Hotel hotel){

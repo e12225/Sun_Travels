@@ -13,7 +13,7 @@ public class HotelDAO {
     @Autowired
     private HotelRepository hotelRepository;
 
-    public List<Hotel> getHotelsList(){
+    public List<Hotel> getHotelList(){
         return hotelRepository.findAll();
     }
 

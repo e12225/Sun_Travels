@@ -7,8 +7,9 @@
 
     <persistence-unit name="sun-travels" transaction-type="RESOURCE_LOCAL">
         <class>com.codegen.suntravels.entities.Hotel</class>
-        <class>com.codegen.suntravels.entities.SmHotelEntity</class>
-
+        <class>com.codegen.suntravels.entities.Customer</class>
+        <class>com.codegen.suntravels.entities.CallCenterAgent</class>
+        <class>com.codegen.suntravels.entities.RoomType</class>
 
         <properties>
             <property name="javax.persistence.jdbc.url" value="jdbc:oracle:thin:@localhost:1521:XE"/>
