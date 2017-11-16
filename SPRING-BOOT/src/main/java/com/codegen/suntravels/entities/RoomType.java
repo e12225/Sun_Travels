@@ -3,12 +3,11 @@ package com.codegen.suntravels.entities;
 import javax.persistence.*;
 
 @Entity
-@SequenceGenerator(name = "roomTypeSeq", initialValue = 1)
 @Table(name = "SM_ROOM_TYPE", schema = "SYS", catalog = "")
 public class RoomType {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "roomTypeSeq")
+    @GeneratedValue
     @Column(name = "RM_TYPE_ID")
     private Integer roomTypeID;
 
@@ -85,8 +84,7 @@ public class RoomType {
         if (!roomTypeID.equals(roomType.roomTypeID)) return false;
         if (!roomTypeName.equals(roomType.roomTypeName)) return false;
         if (!numberOfRooms.equals(roomType.numberOfRooms)) return false;
-        if (!maxAdults.equals(roomType.maxAdults)) return false;
-        return price.equals(roomType.price);
+        return maxAdults.equals(roomType.maxAdults);
     }
 
     @Override
@@ -95,7 +93,6 @@ public class RoomType {
         result = 31 * result + roomTypeName.hashCode();
         result = 31 * result + numberOfRooms.hashCode();
         result = 31 * result + maxAdults.hashCode();
-        result = 31 * result + price.hashCode();
         return result;
     }
 }

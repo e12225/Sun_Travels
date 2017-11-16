@@ -10,5 +10,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface ContractDetailsRepository extends JpaRepository<ContractDetails, Long> {
 
-    // TODO : implement 'findByCtrID()' and 'roomTypeID()'
+    // TODO : implement 'findBy...()'
 }

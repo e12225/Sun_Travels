@@ -3,12 +3,11 @@ package com.codegen.suntravels.entities;
 import javax.persistence.*;
 
 @Entity
-@SequenceGenerator(name = "hotelSeq", initialValue = 1)
 @Table(name = "SM_HOTEL", schema = "SYS", catalog = "")
 public class Hotel {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "hotelSeq")
+    @GeneratedValue
     @Column(name = "HOTEL_ID")
     private Integer hotelID;
 
@@ -16,7 +15,7 @@ public class Hotel {
     private String hotelName;
 
     @Column(name = "HOTEL_PHONE_NO")
-    private String hotelPhoneNumber;
+    private Integer hotelPhoneNumber;
 
     public Integer getHotelID() {
         return hotelID;
@@ -34,11 +33,11 @@ public class Hotel {
         this.hotelName = hotelName;
     }
 
-    public String getHotelPhoneNumber() {
+    public Integer getHotelPhoneNumber() {
         return hotelPhoneNumber;
     }
 
-    public void setHotelPhoneNumber(String hotelPhoneNumber) {
+    public void setHotelPhoneNumber(Integer hotelPhoneNumber) {
         this.hotelPhoneNumber = hotelPhoneNumber;
     }
 

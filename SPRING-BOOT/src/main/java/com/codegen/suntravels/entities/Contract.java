@@ -6,12 +6,11 @@ import javax.persistence.*;
  * Created by DELL on 11/15/2017.
  */
 @Entity
-@SequenceGenerator(name = "contractSeq", initialValue = 1)
 @Table(name = "SM_CONTRACT", schema = "SYS", catalog = "")
 public class Contract {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "contractSeq")
+    @GeneratedValue
     @Column(name = "CTR_ID")
     private Integer contractID;
 

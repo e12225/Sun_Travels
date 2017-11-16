@@ -3,12 +3,11 @@ package com.codegen.suntravels.entities;
 import javax.persistence.*;
 
 @Entity
-@SequenceGenerator(name = "customerSeq", initialValue = 1)
 @Table(name = "SM_CUSTOMER", schema = "SYS", catalog = "")
 public class Customer {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "customerSeq")
+    @GeneratedValue
     @Column(name = "CUST_ID")
     private Integer customerID;
 

@@ -25,7 +25,7 @@ public class ContractDetailsController {
         return contractDetailsService.getContractDetailsList();
     }
 
-    @RequestMapping(method = RequestMethod.POST, path = "add")
+    @RequestMapping(method = RequestMethod.POST, path = "/add")
     public void addContractDetails(@RequestBody ContractDetails contractDetails){
         contractDetailsService.addContractDetails(contractDetails);
     }
