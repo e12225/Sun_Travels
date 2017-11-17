@@ -34,7 +34,7 @@ public class SearchReservationResponse {
         this.price = price;
     }
 
-    public boolean isRoomAvailability() {
+    public boolean getRoomAvailability() {
         return roomAvailability;
     }
 
@@ -51,7 +51,4 @@ public class SearchReservationResponse {
                 ", roomAvailability=" + roomAvailability +
                 '}';
     }
-
-    //TODO : write test case for this if needed
-
 }

@@ -1,6 +1,6 @@
-package com.codegen.suntravels.services;
+package com.codegen.suntravels.services.entityServices;
 
-import com.codegen.suntravels.DAO.HotelDAO;
+import com.codegen.suntravels.DAO.entityDAO.HotelDAO;
 import com.codegen.suntravels.entities.Hotel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -1,7 +1,7 @@
 package com.codegen.suntravels.controllers;
 
 import com.codegen.suntravels.entities.Reservation;
-import com.codegen.suntravels.services.ReservationService;
+import com.codegen.suntravels.services.entityServices.ReservationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;

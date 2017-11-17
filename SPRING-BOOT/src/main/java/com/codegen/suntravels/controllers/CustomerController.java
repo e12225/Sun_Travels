@@ -1,7 +1,7 @@
 package com.codegen.suntravels.controllers;
 
 import com.codegen.suntravels.entities.Customer;
-import com.codegen.suntravels.services.CustomerService;
+import com.codegen.suntravels.services.entityServices.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

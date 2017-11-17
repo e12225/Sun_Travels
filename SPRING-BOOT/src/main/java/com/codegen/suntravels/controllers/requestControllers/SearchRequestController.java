@@ -24,5 +24,4 @@ public class SearchRequestController {
         SearchReservationResponse response = searchRequestService.processSearchRequest(request);
         return response;
     }
-
 }

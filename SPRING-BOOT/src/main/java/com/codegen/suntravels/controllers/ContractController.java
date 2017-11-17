@@ -1,7 +1,7 @@
 package com.codegen.suntravels.controllers;
 
 import com.codegen.suntravels.entities.Contract;
-import com.codegen.suntravels.services.ContractService;
+import com.codegen.suntravels.services.entityServices.ContractService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;

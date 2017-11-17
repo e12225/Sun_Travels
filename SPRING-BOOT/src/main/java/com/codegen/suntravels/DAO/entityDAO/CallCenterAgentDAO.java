@@ -1,4 +1,4 @@
-package com.codegen.suntravels.DAO;
+package com.codegen.suntravels.DAO.entityDAO;
 
 import com.codegen.suntravels.entities.CallCenterAgent;
 import com.codegen.suntravels.repositories.CallCenterAgentRepository;

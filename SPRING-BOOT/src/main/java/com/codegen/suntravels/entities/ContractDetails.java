@@ -1,7 +1,7 @@
 package com.codegen.suntravels.entities;
 
 import javax.persistence.*;
-import java.util.Date;
+import java.sql.Date;
 
 /**
  * Created by DELL on 11/15/2017.

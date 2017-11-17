@@ -1,6 +1,6 @@
 package com.codegen.suntravels.searchRequests;
 
-import java.util.Date;
+import java.sql.Date;
 
 /**
  * Created by DELL on 11/16/2017.
@@ -56,6 +56,4 @@ public class SearchReservationRequest {
                 ", numberOfAdults=" + numberOfAdults +
                 '}';
     }
-
-    //TODO : write test case for this if needed
 }

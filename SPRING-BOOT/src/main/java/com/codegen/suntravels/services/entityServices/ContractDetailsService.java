@@ -1,6 +1,6 @@
-package com.codegen.suntravels.services;
+package com.codegen.suntravels.services.entityServices;
 
-import com.codegen.suntravels.DAO.ContractDetailsDAO;
+import com.codegen.suntravels.DAO.entityDAO.ContractDetailsDAO;
 import com.codegen.suntravels.entities.ContractDetails;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

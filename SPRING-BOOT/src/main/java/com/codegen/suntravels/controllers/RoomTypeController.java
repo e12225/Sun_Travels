@@ -1,7 +1,7 @@
 package com.codegen.suntravels.controllers;
 
 import com.codegen.suntravels.entities.RoomType;
-import com.codegen.suntravels.services.RoomTypeService;
+import com.codegen.suntravels.services.entityServices.RoomTypeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;

@@ -1,4 +1,4 @@
-package com.codegen.suntravels.DAO;
+package com.codegen.suntravels.DAO.entityDAO;
 
 import com.codegen.suntravels.entities.RoomType;
 import com.codegen.suntravels.repositories.RoomTypeRepository;

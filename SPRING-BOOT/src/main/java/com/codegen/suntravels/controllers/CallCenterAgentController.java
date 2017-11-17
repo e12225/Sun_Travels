@@ -1,7 +1,7 @@
 package com.codegen.suntravels.controllers;
 
 import com.codegen.suntravels.entities.CallCenterAgent;
-import com.codegen.suntravels.services.CallCenterAgentService;
+import com.codegen.suntravels.services.entityServices.CallCenterAgentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
