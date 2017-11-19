@@ -17,6 +17,12 @@ public class Hotel {
     @Column(name = "HOTEL_PHONE_NO")
     private Integer hotelPhoneNumber;
 
+    @Column(name = "HOTEL_COUNTRY_ID")
+    private Integer countryID;
+
+    @Column(name = "HOTEL_CITY_ID")
+    private Integer cityID;
+
     public Integer getHotelID() {
         return hotelID;
     }
@@ -41,12 +47,30 @@ public class Hotel {
         this.hotelPhoneNumber = hotelPhoneNumber;
     }
 
+    public Integer getCountryID() {
+        return countryID;
+    }
+
+    public void setCountryID(Integer countryID) {
+        this.countryID = countryID;
+    }
+
+    public Integer getCityID() {
+        return cityID;
+    }
+
+    public void setCityID(Integer cityID) {
+        this.cityID = cityID;
+    }
+
     @Override
     public String toString() {
         return "Hotel{" +
                 "hotelID=" + hotelID +
                 ", hotelName='" + hotelName + '\'' +
-                ", hotelPhoneNumber='" + hotelPhoneNumber + '\'' +
+                ", hotelPhoneNumber=" + hotelPhoneNumber +
+                ", countryID=" + countryID +
+                ", cityID=" + cityID +
                 '}';
     }
 
@@ -59,7 +83,11 @@ public class Hotel {
 
         if (!hotelID.equals(hotel.hotelID)) return false;
         if (!hotelName.equals(hotel.hotelName)) return false;
-        return hotelPhoneNumber != null ? hotelPhoneNumber.equals(hotel.hotelPhoneNumber) : hotel.hotelPhoneNumber == null;
+        if (hotelPhoneNumber != null ? !hotelPhoneNumber.equals(hotel.hotelPhoneNumber) : hotel.hotelPhoneNumber != null)
+            return false;
+        if (!countryID.equals(hotel.countryID)) return false;
+        return cityID.equals(hotel.cityID);
+
     }
 
     @Override
@@ -67,6 +95,8 @@ public class Hotel {
         int result = hotelID.hashCode();
         result = 31 * result + hotelName.hashCode();
         result = 31 * result + (hotelPhoneNumber != null ? hotelPhoneNumber.hashCode() : 0);
+        result = 31 * result + countryID.hashCode();
+        result = 31 * result + cityID.hashCode();
         return result;
     }
 }

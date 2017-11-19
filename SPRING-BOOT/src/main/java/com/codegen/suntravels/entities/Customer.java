@@ -17,6 +17,12 @@ public class Customer {
     @Column(name = "CUST_PHONE_NO")
     private Integer customerPhoneNumber;
 
+    @Column(name = "CUST_COUNTRY_ID")
+    private Integer countryID;
+
+    @Column(name = "CUST_CITY_ID")
+    private Integer cityID;
+
     public Integer getCustomerID() {
         return customerID;
     }
@@ -41,12 +47,30 @@ public class Customer {
         this.customerPhoneNumber = customerPhoneNumber;
     }
 
+    public Integer getCountryID() {
+        return countryID;
+    }
+
+    public void setCountryID(Integer countryID) {
+        this.countryID = countryID;
+    }
+
+    public Integer getCityID() {
+        return cityID;
+    }
+
+    public void setCityID(Integer cityID) {
+        this.cityID = cityID;
+    }
+
     @Override
     public String toString() {
         return "Customer{" +
                 "customerID=" + customerID +
                 ", customerName='" + customerName + '\'' +
                 ", customerPhoneNumber=" + customerPhoneNumber +
+                ", countryID=" + countryID +
+                ", cityID=" + cityID +
                 '}';
     }
 
@@ -59,7 +83,10 @@ public class Customer {
 
         if (!customerID.equals(customer.customerID)) return false;
         if (!customerName.equals(customer.customerName)) return false;
-        return customerPhoneNumber.equals(customer.customerPhoneNumber);
+        if (!customerPhoneNumber.equals(customer.customerPhoneNumber)) return false;
+        if (!countryID.equals(customer.countryID)) return false;
+        return cityID.equals(customer.cityID);
+
     }
 
     @Override
@@ -67,6 +94,8 @@ public class Customer {
         int result = customerID.hashCode();
         result = 31 * result + customerName.hashCode();
         result = 31 * result + customerPhoneNumber.hashCode();
+        result = 31 * result + countryID.hashCode();
+        result = 31 * result + cityID.hashCode();
         return result;
     }
 }

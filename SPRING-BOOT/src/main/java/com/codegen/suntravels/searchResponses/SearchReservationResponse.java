@@ -1,54 +1,48 @@
 package com.codegen.suntravels.searchResponses;
 
+import com.codegen.suntravels.logics.AvailableReservationComposer;
+
+import java.util.List;
+
 /**
  * Created by DELL on 11/16/2017.
  */
 public class SearchReservationResponse {
 
-    private String hotelName;
-    private String roomType;
-    private Double price; // The marked up price
-    private boolean roomAvailability; // true or false
+    private List<AvailableReservationComposer> availableReservations;
+    private String reservationsAvailability;
+    private Integer numberOfAvailableReservations;
 
-    public String getHotelName() {
-        return hotelName;
+    public List<AvailableReservationComposer> getAvailableReservations() {
+        return availableReservations;
     }
 
-    public void setHotelName(String hotelName) {
-        this.hotelName = hotelName;
+    public void setAvailableReservations(List<AvailableReservationComposer> availableReservations) {
+        this.availableReservations = availableReservations;
     }
 
-    public String getRoomType() {
-        return roomType;
+    public Integer getNumberOfAvailableReservations() {
+        return numberOfAvailableReservations;
     }
 
-    public void setRoomType(String roomType) {
-        this.roomType = roomType;
+    public void setNumberOfAvailableReservations(Integer numberOfAvailableReservations) {
+        this.numberOfAvailableReservations = numberOfAvailableReservations;
     }
 
-    public Double getPrice() {
-        return price;
+    public String getReservationsAvailability() {
+        return reservationsAvailability;
     }
 
-    public void setPrice(Double price) {
-        this.price = price;
-    }
-
-    public boolean getRoomAvailability() {
-        return roomAvailability;
-    }
-
-    public void setRoomAvailability(boolean roomAvailability) {
-        this.roomAvailability = roomAvailability;
+    public void setReservationsAvailability(String reservationsAvailability) {
+        this.reservationsAvailability = reservationsAvailability;
     }
 
     @Override
     public String toString() {
         return "SearchReservationResponse{" +
-                "hotelName='" + hotelName + '\'' +
-                ", roomType='" + roomType + '\'' +
-                ", price=" + price +
-                ", roomAvailability=" + roomAvailability +
+                "availableReservations=" + availableReservations +
+                ", reservationsAvailability='" + reservationsAvailability + '\'' +
+                ", numberOfAvailableReservations=" + numberOfAvailableReservations +
                 '}';
     }
 }

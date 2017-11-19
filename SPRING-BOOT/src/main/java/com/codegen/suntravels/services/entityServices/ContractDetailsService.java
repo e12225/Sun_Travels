@@ -20,6 +20,10 @@ public class ContractDetailsService {
         return this.contractDetailsDAO.getContractDetailsList();
     }
 
+    public List<ContractDetails> getCtrDetailsByCtrID(Integer contractID){
+        return this.contractDetailsDAO.getCtrDetailsByCtrID(contractID);
+    }
+
     public void addContractDetails(ContractDetails contractDetails){
         this.contractDetailsDAO.addContractDetails(contractDetails);
     }

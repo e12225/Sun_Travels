@@ -20,6 +20,10 @@ public class ContractDetailsDAO {
         return contractDetailsRepository.findAll();
     }
 
+    public List<ContractDetails> getCtrDetailsByCtrID(Integer contractID){
+        return contractDetailsRepository.getCtrDetailsList(contractID);
+    }
+
     public void addContractDetails(ContractDetails contractDetails){
         contractDetailsRepository.save(contractDetails);
     }

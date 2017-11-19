@@ -20,4 +20,8 @@ public class RoomTypeService {
     public void addRoomType(RoomType roomType){
         this.roomTypeDAO.addRoomType(roomType);
     }
+
+    public RoomType getRoomTypeByID(Integer roomTypeID){
+        return this.roomTypeDAO.getRoomTypeByID(roomTypeID);
+    }
 }

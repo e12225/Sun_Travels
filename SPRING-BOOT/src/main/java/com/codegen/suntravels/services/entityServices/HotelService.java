@@ -20,4 +20,8 @@ public class HotelService {
     public void addHotel(Hotel hotel){
         this.hotelDAO.addHotel(hotel);
     }
+
+    public Hotel getHotelByID(Integer hotelID){
+        return this.hotelDAO.getHotelByID(hotelID);
+    }
 }

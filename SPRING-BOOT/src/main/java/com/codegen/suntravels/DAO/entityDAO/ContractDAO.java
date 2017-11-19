@@ -20,6 +20,10 @@ public class ContractDAO {
         return contractRepository.findAll();
     }
 
+    public Contract getContractByID(Integer contractID){
+        return contractRepository.getContractByID(contractID);
+    }
+
     public void addContract(Contract contract){
         contractRepository.save(contract);
     }

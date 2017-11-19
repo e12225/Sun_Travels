@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.websocket.server.PathParam;
 import java.util.List;
 
 /**
@@ -23,6 +24,11 @@ public class ContractController {
     @RequestMapping(method = RequestMethod.GET, path = "/list")
     public List<Contract> getContractList(){
         return contractService.getContractList();
+    }
+
+    @RequestMapping(method = RequestMethod.GET, path = "/list/{contractID}")
+    public Contract getContractByID(@PathParam("contractID") Integer contractID){
+        return contractService.getContractByID(contractID);
     }
 
     @RequestMapping(method = RequestMethod.POST, path = "/add")

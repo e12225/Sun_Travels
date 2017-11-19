@@ -1,6 +1,7 @@
 package com.codegen.suntravels.searchRequests;
 
 import java.sql.Date;
+import java.util.ArrayList;
 
 /**
  * Created by DELL on 11/16/2017.
@@ -13,7 +14,7 @@ public class SearchReservationRequest {
 
     private Integer numberOfRooms;
 
-    private Integer numberOfAdults;
+    private ArrayList<Integer> noOfAdultsPerRoom;
 
     public Date getCheckInDate() {
         return checkInDate;
@@ -39,21 +40,21 @@ public class SearchReservationRequest {
         this.numberOfRooms = numberOfRooms;
     }
 
-    public Integer getNumberOfAdults() {
-        return numberOfAdults;
+    public ArrayList<Integer> getNoOfAdultsPerRoom() {
+        return noOfAdultsPerRoom;
     }
 
-    public void setNumberOfAdults(Integer numberOfAdults) {
-        this.numberOfAdults = numberOfAdults;
+    public void setNoOfAdultsPerRoom(ArrayList<Integer> noOfAdultsPerRoom) {
+        this.noOfAdultsPerRoom = noOfAdultsPerRoom;
     }
 
     @Override
     public String toString() {
-        return "ReservationRequest{" +
+        return "SearchReservationRequest{" +
                 "checkInDate=" + checkInDate +
                 ", numberOfNights=" + numberOfNights +
                 ", numberOfRooms=" + numberOfRooms +
-                ", numberOfAdults=" + numberOfAdults +
+                ", noOfAdultsPerRoom=" + noOfAdultsPerRoom +
                 '}';
     }
 }

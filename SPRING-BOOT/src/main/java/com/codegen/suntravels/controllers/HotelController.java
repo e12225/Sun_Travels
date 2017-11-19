@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.websocket.server.PathParam;
 import java.util.List;
 
 @RestController
@@ -15,11 +16,16 @@ import java.util.List;
 public class HotelController {
 
     @Autowired
-    HotelService hotelService;
+    private HotelService hotelService;
 
     @RequestMapping(method = RequestMethod.GET, path = "/list")
     public List<Hotel> getHotelList(){
         return hotelService.getHotelList();
+    }
+
+    @RequestMapping(method = RequestMethod.GET, path = "/list/{hotelID}")
+    public Hotel getHotelByID(@PathParam("hotelID") Integer hotelID){
+        return hotelService.getHotelByID(hotelID);
     }
 
     @RequestMapping(method = RequestMethod.POST, path = "/add")
