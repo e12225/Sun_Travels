@@ -1,6 +1,7 @@
-package com.codegen.suntravels.controllers;
+package com.codegen.suntravels.controllers.entityControllers;
 
 import com.codegen.suntravels.entities.RoomReservation;
+import com.codegen.suntravels.reservationResponses.HotelRoomReservationResponse;
 import com.codegen.suntravels.services.entityServices.RoomReservationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -23,7 +24,13 @@ public class RoomReservationController {
     }
 
     @RequestMapping(method = RequestMethod.POST, path = "/add")
-    public void addRoomReservation(@RequestBody RoomReservation roomReservation){
-        roomReservationService.addRoomReservation(roomReservation);
+    public HotelRoomReservationResponse addRoomReservation(@RequestBody RoomReservation roomReservation){
+
+        HotelRoomReservationResponse response = new HotelRoomReservationResponse();
+
+        Integer roomReservationID = roomReservationService.addRoomReservation(roomReservation);
+        response.setHotelRoomReservationID(roomReservationID);
+
+        return response;
     }
 }

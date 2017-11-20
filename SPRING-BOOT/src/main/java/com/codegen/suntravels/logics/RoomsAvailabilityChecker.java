@@ -35,17 +35,19 @@ public class RoomsAvailabilityChecker {
 
     public List<AvailableReservationComposer> getRoomsAvailability(List<ContractDetails> validCtrDetailsList, SearchReservationRequest request, Contract contract) {
 
-        List<AvailableReservationComposer> availableReservations = null;
+        List<AvailableReservationComposer> availableReservations = new ArrayList<>();
 
         Integer numberOfRooms;
         Integer maxAdultsPerRoom;
 
         ArrayList<Integer> numberOfAdultsPerRoom = request.getNoOfAdultsPerRoom();
+
         /**
          * Calculating the total number of adults
          */
         Integer totalAdults = 0;
-        for (int i = 0; i < numberOfAdultsPerRoom.size(); i++) {
+        int i;
+        for (i = 0; i < numberOfAdultsPerRoom.size(); i++) {
             totalAdults += numberOfAdultsPerRoom.get(i);
         }
 
@@ -75,7 +77,7 @@ public class RoomsAvailabilityChecker {
                 RoomType availableRoomType = roomTypeDAO.getRoomTypeByID(ctrDetails.getRoomTypeID());
                 Hotel relevantHotel = hotelDAO.getHotelByID(contract.getHotelID());
 
-                Double markedUpPrice = markupCalculator.calculateMarkUpPrice(availableRoomType.getPrice(), totalAdults, request.getNumberOfNights());
+                Double markedUpPrice = markupCalculator.calculateMarkUpPrice(ctrDetails.getPrice(), totalAdults, request.getNumberOfNights());
 
                 reservation.setRoomType(availableRoomType.getRoomTypeName());
                 reservation.setMarkedUpPrice(markedUpPrice);

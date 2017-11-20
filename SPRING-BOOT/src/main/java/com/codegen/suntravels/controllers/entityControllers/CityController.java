@@ -1,8 +1,9 @@
-package com.codegen.suntravels.controllers;
+package com.codegen.suntravels.controllers.entityControllers;
 
 import com.codegen.suntravels.entities.City;
 import com.codegen.suntravels.services.entityServices.CityService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -25,7 +26,7 @@ public class CityController {
     }
 
     @RequestMapping(method = RequestMethod.POST, path = "/add")
-    public void addCity(City city){
+    public void addCity(@RequestBody City city){
         cityService.addCity(city);
     }
 }

@@ -17,7 +17,11 @@ public class ReservationDAO {
         return reservationRepository.findAll();
     }
 
-    public void addReservation(Reservation reservation){
-        reservationRepository.save(reservation);
+    public Integer addReservation(Reservation reservation){
+        return reservationRepository.save(reservation).getReservationID();
+    }
+
+    public Reservation getReservationByID(Integer reservationID){
+        return reservationRepository.getReservationByID(reservationID);
     }
 }

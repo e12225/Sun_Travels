@@ -1,4 +1,4 @@
-package com.codegen.suntravels.controllers;
+package com.codegen.suntravels.controllers.entityControllers;
 
 import com.codegen.suntravels.entities.RoomType;
 import com.codegen.suntravels.services.entityServices.RoomTypeService;

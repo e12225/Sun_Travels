@@ -1,4 +1,4 @@
-package com.codegen.suntravels.controllers;
+package com.codegen.suntravels.controllers.entityControllers;
 
 import com.codegen.suntravels.entities.Contract;
 import com.codegen.suntravels.services.entityServices.ContractService;
@@ -29,6 +29,11 @@ public class ContractController {
     @RequestMapping(method = RequestMethod.GET, path = "/list/{contractID}")
     public Contract getContractByID(@PathParam("contractID") Integer contractID){
         return contractService.getContractByID(contractID);
+    }
+
+    @RequestMapping(method = RequestMethod.GET, path = "/listByHotelID/{hotelID}")
+    public Contract getContractByHotelID(@PathParam("hotelID") Integer hotelID){
+        return contractService.getContractByHotelID(hotelID);
     }
 
     @RequestMapping(method = RequestMethod.POST, path = "/add")

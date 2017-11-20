@@ -17,7 +17,7 @@ public class RoomReservationDAO {
         return roomReservationRepository.findAll();
     }
 
-    public void addRoomReservation(RoomReservation roomReservation){
-        roomReservationRepository.save(roomReservation);
+    public Integer addRoomReservation(RoomReservation roomReservation){
+        return roomReservationRepository.save(roomReservation).getRoomReservationID();
     }
 }

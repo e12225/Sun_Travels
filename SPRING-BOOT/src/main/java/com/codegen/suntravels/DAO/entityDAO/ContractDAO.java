@@ -24,6 +24,10 @@ public class ContractDAO {
         return contractRepository.getContractByID(contractID);
     }
 
+    public Contract getContractByHotelID(Integer hotelID){
+        return contractRepository.getContractByHotelID(hotelID);
+    }
+
     public void addContract(Contract contract){
         contractRepository.save(contract);
     }

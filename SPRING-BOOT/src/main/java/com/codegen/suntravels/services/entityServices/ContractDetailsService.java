@@ -24,6 +24,10 @@ public class ContractDetailsService {
         return this.contractDetailsDAO.getCtrDetailsByCtrID(contractID);
     }
 
+    public ContractDetails getCtrDetailsByCtrIDnRmTypeID(Integer contractID, Integer roomTypeID){
+        return this.contractDetailsDAO.getCtrDetailsByCtrIDnRmTypeID(contractID, roomTypeID);
+    }
+
     public void addContractDetails(ContractDetails contractDetails){
         this.contractDetailsDAO.addContractDetails(contractDetails);
     }

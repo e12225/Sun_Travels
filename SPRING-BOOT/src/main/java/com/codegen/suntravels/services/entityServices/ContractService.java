@@ -24,6 +24,10 @@ public class ContractService {
         return this.contractDAO.getContractByID(contractID);
     }
 
+    public Contract getContractByHotelID(Integer hotelID){
+        return this.contractDAO.getContractByHotelID(hotelID);
+    }
+
     public void addContract(Contract contract){
         this.contractDAO.addContract(contract);
     }

@@ -1,4 +1,4 @@
-package com.codegen.suntravels.services.requestServices;
+package com.codegen.suntravels.services.searchRequestServices;
 
 import com.codegen.suntravels.DAO.entityDAO.ContractDAO;
 import com.codegen.suntravels.DAO.entityDAO.ContractDetailsDAO;
@@ -50,7 +50,7 @@ public class SearchRequestService {
             }
         }
 
-        if(availableReservations == null){
+        if(availableReservations.size() == 0){
             response.setNumberOfAvailableReservations(0);
             response.setAvailableReservations(availableReservations); // this is set to null
             response.setReservationsAvailability("Not Available");

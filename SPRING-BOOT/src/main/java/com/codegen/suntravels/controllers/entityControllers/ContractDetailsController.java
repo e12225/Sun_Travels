@@ -1,4 +1,4 @@
-package com.codegen.suntravels.controllers;
+package com.codegen.suntravels.controllers.entityControllers;
 
 import com.codegen.suntravels.entities.ContractDetails;
 import com.codegen.suntravels.services.entityServices.ContractDetailsService;
@@ -30,6 +30,8 @@ public class ContractDetailsController {
     public List<ContractDetails> getCtrDetailsByCtrID(@PathParam("contractID") Integer contractID){
         return contractDetailsService.getCtrDetailsByCtrID(contractID);
     }
+
+    // TODO : write the other service here
 
     @RequestMapping(method = RequestMethod.POST, path = "/add")
     public void addContractDetails(@RequestBody ContractDetails contractDetails){
