@@ -17,10 +17,6 @@ public class ReservationService {
         return this.reservationDAO.getReservationList();
     }
 
-    public Integer addReservation(Reservation reservation){
-        return this.reservationDAO.addReservation(reservation);
-    }
-
     public Reservation getReservationByID(Integer reservationID){
         return this.reservationDAO.getReservationByID(reservationID);
     }

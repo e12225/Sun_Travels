@@ -15,9 +15,6 @@ public class Reservation {
     @Column(name = "RES_CUST_ID")
     private Integer customerID;
 
-    @Column(name = "RES_CC_AGENT_ID")
-    private Integer callCenterAgentID;
-
     @Column(name = "SM_HOTEL_ID")
     private Integer hotelID;
 
@@ -47,14 +44,6 @@ public class Reservation {
 
     public void setCustomerID(Integer customerID) {
         this.customerID = customerID;
-    }
-
-    public Integer getCallCenterAgentID() {
-        return callCenterAgentID;
-    }
-
-    public void setCallCenterAgentID(Integer callCenterAgentID) {
-        this.callCenterAgentID = callCenterAgentID;
     }
 
     public Integer getHotelID() {
@@ -102,7 +91,6 @@ public class Reservation {
         return "Reservation{" +
                 "reservationID=" + reservationID +
                 ", customerID=" + customerID +
-                ", callCenterAgentID=" + callCenterAgentID +
                 ", hotelID=" + hotelID +
                 ", checkInDate=" + checkInDate +
                 ", checkOutDate=" + checkOutDate +
@@ -120,7 +108,6 @@ public class Reservation {
 
         if (!reservationID.equals(that.reservationID)) return false;
         if (!customerID.equals(that.customerID)) return false;
-        if (!callCenterAgentID.equals(that.callCenterAgentID)) return false;
         if (!hotelID.equals(that.hotelID)) return false;
         return numberOfNights.equals(that.numberOfNights);
     }
@@ -129,7 +116,6 @@ public class Reservation {
     public int hashCode() {
         int result = reservationID.hashCode();
         result = 31 * result + customerID.hashCode();
-        result = 31 * result + callCenterAgentID.hashCode();
         result = 31 * result + hotelID.hashCode();
         result = 31 * result + numberOfNights.hashCode();
         return result;

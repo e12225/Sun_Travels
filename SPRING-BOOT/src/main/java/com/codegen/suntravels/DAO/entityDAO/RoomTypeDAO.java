@@ -17,8 +17,12 @@ public class RoomTypeDAO {
         return roomTypeRepository.findAll();
     }
 
-    public RoomType getRoomTypeByID(Integer rmmTypeID){
-        return roomTypeRepository.getRoomTypeByID(rmmTypeID);
+    public RoomType getRoomTypeByID(Integer roomTypeID){
+        return roomTypeRepository.getRoomTypeByID(roomTypeID);
+    }
+
+    public RoomType getRoomTypeByName(String roomTypeName){
+        return roomTypeRepository.getRoomTypeByName(roomTypeName);
     }
 
     public void addRoomType(RoomType roomType){

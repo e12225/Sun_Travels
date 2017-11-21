@@ -28,15 +28,4 @@ public class ReservationController {
     public Reservation getReservationByID(@PathParam("reservationID") Integer reservationID){
         return reservationService.getReservationByID(reservationID);
     }
-
-    @RequestMapping(method = RequestMethod.POST, path = "/add")
-    public HotelReservationResponse addReservation(@RequestBody Reservation reservation) {
-
-        HotelReservationResponse response = new HotelReservationResponse();
-
-        Integer reservationID = reservationService.addReservation(reservation);
-        response.setReservationID(reservationID);
-
-        return response;
-    }
 }

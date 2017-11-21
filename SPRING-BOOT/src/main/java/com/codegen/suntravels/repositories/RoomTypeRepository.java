@@ -15,4 +15,9 @@ public interface RoomTypeRepository extends JpaRepository<RoomType, Long> {
     @Query("SELECT r FROM RoomType r WHERE r.roomTypeID = :rtID")
     RoomType getRoomTypeByID(@Param("rtID") Integer roomTypeID);
 
+    /**
+     * Retrieving the room types filtered by roomTypeName
+     */
+    @Query("SELECT r FROM RoomType r WHERE r.roomTypeName = :rtName")
+    RoomType getRoomTypeByName(@Param("rtName") String roomTypeName);
 }

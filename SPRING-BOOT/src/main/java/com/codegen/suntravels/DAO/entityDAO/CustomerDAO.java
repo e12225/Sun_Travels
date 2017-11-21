@@ -17,6 +17,10 @@ public class CustomerDAO {
         return customerRepository.findAll();
     }
 
+    public Customer getCustomerByName(String customerName){
+        return customerRepository.getCustomerByName(customerName);
+    }
+
     public void addCustomer(Customer customer){
         customerRepository.save(customer);
     }

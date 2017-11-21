@@ -22,15 +22,4 @@ public class RoomReservationController {
     public List<RoomReservation> getRoomReservationList(){
         return roomReservationService.getRoomReservationList();
     }
-
-    @RequestMapping(method = RequestMethod.POST, path = "/add")
-    public HotelRoomReservationResponse addRoomReservation(@RequestBody RoomReservation roomReservation){
-
-        HotelRoomReservationResponse response = new HotelRoomReservationResponse();
-
-        Integer roomReservationID = roomReservationService.addRoomReservation(roomReservation);
-        response.setHotelRoomReservationID(roomReservationID);
-
-        return response;
-    }
 }

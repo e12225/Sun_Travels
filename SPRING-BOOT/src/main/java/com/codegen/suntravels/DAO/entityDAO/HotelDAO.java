@@ -24,4 +24,8 @@ public class HotelDAO {
     public Hotel getHotelByID(Integer hotelID){
         return hotelRepository.getHotelByID(hotelID);
     }
+
+    public Hotel getHotelByName(String hotelName){
+        return hotelRepository.getHotelByName(hotelName);
+    }
 }
