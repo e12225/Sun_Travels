@@ -54,8 +54,6 @@ public class BookingRequestService {
         reservation.setNumberOfNights(request.getNumberOfNights());
         reservation.setReservedDate(new Date(c2.getTimeInMillis()));
 
-
-
         return response;
     }
 }

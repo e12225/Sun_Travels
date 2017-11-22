@@ -11,6 +11,7 @@ import com.codegen.suntravels.searchResponses.SearchReservationResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -35,7 +36,7 @@ public class SearchRequestService {
         //TODO : load the ctrDetails list, contracts list, room types list, hotels list for a cache at the beginning
         List<Contract> contracts = contractsDAO.getContractList();
 
-        List<AvailableReservationComposer> availableReservations = null;
+        List<AvailableReservationComposer> availableReservations = new ArrayList<>();
 
         for(Contract contract : contracts){
 
