@@ -3,47 +3,57 @@ package com.codegen.suntravels.logics;
 /**
  * Created by DELL on 11/19/2017.
  */
-public class AvailableReservationComposer {
+public class AvailableReservationComposer
+{
 
     private String hotelName;
     private String roomType;
     private Double markedUpPrice;
     private String roomsAvailability;
 
-    public String getHotelName() {
+    public String getHotelName()
+    {
         return hotelName;
     }
 
-    public void setHotelName(String hotelName) {
+    public void setHotelName( String hotelName )
+    {
         this.hotelName = hotelName;
     }
 
-    public String getRoomType() {
+    public String getRoomType()
+    {
         return roomType;
     }
 
-    public void setRoomType(String roomType) {
+    public void setRoomType( String roomType )
+    {
         this.roomType = roomType;
     }
 
-    public Double getMarkedUpPrice() {
+    public Double getMarkedUpPrice()
+    {
         return markedUpPrice;
     }
 
-    public void setMarkedUpPrice(Double markedUpPrice) {
+    public void setMarkedUpPrice( Double markedUpPrice )
+    {
         this.markedUpPrice = markedUpPrice;
     }
 
-    public String getRoomsAvailability() {
+    public String getRoomsAvailability()
+    {
         return roomsAvailability;
     }
 
-    public void setRoomsAvailability(String roomsAvailability) {
+    public void setRoomsAvailability( String roomsAvailability )
+    {
         this.roomsAvailability = roomsAvailability;
     }
 
     @Override
-    public String toString() {
+    public String toString()
+    {
         return "AvailableReservationComposer{" +
                 "hotelName='" + hotelName + '\'' +
                 ", roomType='" + roomType + '\'' +
