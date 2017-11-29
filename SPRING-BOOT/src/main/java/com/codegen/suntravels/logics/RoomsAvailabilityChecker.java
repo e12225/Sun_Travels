@@ -40,21 +40,22 @@ public class RoomsAvailabilityChecker {
         Integer numberOfRooms;
         Integer maxAdultsPerRoom;
 
-        ArrayList<Integer> numberOfAdultsPerRoom = request.getNoOfAdultsPerRoom();
+        Integer testnumberOfAdultsPerRoom = request.getTestnumberOfAdultsPerRoom();
+//        ArrayList<Integer> numberOfAdultsPerRoom = request.getNoOfAdultsPerRoom();
 
         /**
          * Calculating the total number of adults
          */
-        Integer totalAdults = 0;
-        int i;
-        for (i = 0; i < numberOfAdultsPerRoom.size(); i++) {
-            totalAdults += numberOfAdultsPerRoom.get(i);
-        }
+//        Integer totalAdults = 0;
+//        int i;
+//        for (i = 0; i < numberOfAdultsPerRoom.size(); i++) {
+//            totalAdults += numberOfAdultsPerRoom.get(i);
+//        }
 
         /**
          * getting the maximum number of adults per room in the request
          */
-        Integer requestedMaxAdultsPerRoom = Collections.max(numberOfAdultsPerRoom);
+//        Integer requestedMaxAdultsPerRoom = Collections.max(numberOfAdultsPerRoom);
 
         Integer requiredRoomCount = request.getNumberOfRooms();
 
@@ -67,7 +68,7 @@ public class RoomsAvailabilityChecker {
             numberOfRooms = ctrDetails.getNumberOfRooms();
             maxAdultsPerRoom = ctrDetails.getMaxAdults();
 
-            if (requiredRoomCount <= numberOfRooms && requestedMaxAdultsPerRoom <= maxAdultsPerRoom) {
+            if (requiredRoomCount <= numberOfRooms && testnumberOfAdultsPerRoom <= maxAdultsPerRoom) {
 
                 /**
                  * The room type is available
@@ -77,7 +78,7 @@ public class RoomsAvailabilityChecker {
                 RoomType availableRoomType = roomTypeDAO.getRoomTypeByID(ctrDetails.getRoomTypeID());
                 Hotel relevantHotel = hotelDAO.getHotelByID(contract.getHotelID());
 
-                Double markedUpPrice = markupCalculator.calculateMarkUpPrice(ctrDetails.getPrice(), totalAdults, request.getNumberOfNights());
+                Double markedUpPrice = markupCalculator.calculateMarkUpPrice(ctrDetails.getPrice(), testnumberOfAdultsPerRoom, request.getNumberOfNights());
 
                 reservation.setRoomType(availableRoomType.getRoomTypeName());
                 reservation.setMarkedUpPrice(markedUpPrice);

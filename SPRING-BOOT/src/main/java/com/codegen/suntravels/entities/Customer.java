@@ -15,7 +15,7 @@ public class Customer {
     private String customerName;
 
     @Column(name = "CUST_PHONE_NO")
-    private Integer customerPhoneNumber;
+    private Long customerPhoneNumber;
 
     @Column(name = "CUST_COUNTRY_ID")
     private Integer countryID;
@@ -39,11 +39,11 @@ public class Customer {
         this.customerName = customerName;
     }
 
-    public Integer getCustomerPhoneNumber() {
+    public Long getCustomerPhoneNumber() {
         return customerPhoneNumber;
     }
 
-    public void setCustomerPhoneNumber(Integer customerPhoneNumber) {
+    public void setCustomerPhoneNumber(Long customerPhoneNumber) {
         this.customerPhoneNumber = customerPhoneNumber;
     }
 

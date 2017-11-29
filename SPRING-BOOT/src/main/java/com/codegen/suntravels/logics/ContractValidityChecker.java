@@ -14,7 +14,7 @@ public class ContractValidityChecker {
 
     public List<ContractDetails> getValidContractDetailsList(List<ContractDetails> contractDetailsList, SearchReservationRequest request){
 
-        List<ContractDetails> validContractDetailsList = null;
+        List<ContractDetails> validContractDetailsList = new ArrayList<>();
 
         /**
          * If the first element of the contract details list is valid, the rest of the elements of the same list

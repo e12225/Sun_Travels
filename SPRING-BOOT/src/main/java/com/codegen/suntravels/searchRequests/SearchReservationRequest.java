@@ -14,7 +14,9 @@ public class SearchReservationRequest {
 
     private Integer numberOfRooms;
 
-    private ArrayList<Integer> noOfAdultsPerRoom;
+//    private ArrayList<Integer> noOfAdultsPerRoom;
+
+    private Integer testnumberOfAdultsPerRoom;
 
     public Date getCheckInDate() {
         return checkInDate;
@@ -40,21 +42,32 @@ public class SearchReservationRequest {
         this.numberOfRooms = numberOfRooms;
     }
 
-    public ArrayList<Integer> getNoOfAdultsPerRoom() {
-        return noOfAdultsPerRoom;
+//    public ArrayList<Integer> getNoOfAdultsPerRoom() {
+//        return noOfAdultsPerRoom;
+//    }
+//
+//    public void setNoOfAdultsPerRoom(ArrayList<Integer> noOfAdultsPerRoom) {
+//        this.noOfAdultsPerRoom = noOfAdultsPerRoom;
+//    }
+
+
+    public Integer getTestnumberOfAdultsPerRoom()
+    {
+        return testnumberOfAdultsPerRoom;
     }
 
-    public void setNoOfAdultsPerRoom(ArrayList<Integer> noOfAdultsPerRoom) {
-        this.noOfAdultsPerRoom = noOfAdultsPerRoom;
+    public void setTestnumberOfAdultsPerRoom( Integer testnumberOfAdultsPerRoom )
+    {
+        this.testnumberOfAdultsPerRoom = testnumberOfAdultsPerRoom;
     }
 
-    @Override
-    public String toString() {
+    @Override public String toString()
+    {
         return "SearchReservationRequest{" +
                 "checkInDate=" + checkInDate +
                 ", numberOfNights=" + numberOfNights +
                 ", numberOfRooms=" + numberOfRooms +
-                ", noOfAdultsPerRoom=" + noOfAdultsPerRoom +
+                ", testnumberOfAdultsPerRoom=" + testnumberOfAdultsPerRoom +
                 '}';
     }
 }

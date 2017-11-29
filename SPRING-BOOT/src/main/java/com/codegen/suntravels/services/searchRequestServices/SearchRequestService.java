@@ -46,7 +46,7 @@ public class SearchRequestService
                 /**
                  * i.e the contract and its contract details list(by default) are valid
                  */
-                availableReservations = searchRequestDAO.getRoomTypesWithEnoughRooms( validContractDetailsList, request, contract );
+                availableReservations.addAll( searchRequestDAO.getRoomTypesWithEnoughRooms( validContractDetailsList, request, contract ) );
             }
         }
 

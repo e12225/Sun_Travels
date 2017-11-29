@@ -1,6 +1,7 @@
 package com.codegen.suntravels.entities;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
 @Table(name = "SM_HOTEL", schema = "SYS", catalog = "")
@@ -15,7 +16,7 @@ public class Hotel {
     private String hotelName;
 
     @Column(name = "HOTEL_PHONE_NO")
-    private Integer hotelPhoneNumber;
+    private Long hotelPhoneNumber;
 
     @Column(name = "HOTEL_COUNTRY_ID")
     private Integer countryID;
@@ -39,11 +40,11 @@ public class Hotel {
         this.hotelName = hotelName;
     }
 
-    public Integer getHotelPhoneNumber() {
+    public Long getHotelPhoneNumber() {
         return hotelPhoneNumber;
     }
 
-    public void setHotelPhoneNumber(Integer hotelPhoneNumber) {
+    public void setHotelPhoneNumber(Long hotelPhoneNumber) {
         this.hotelPhoneNumber = hotelPhoneNumber;
     }
 
