@@ -16,7 +16,9 @@ public class SearchReservationRequest {
 
 //    private ArrayList<Integer> noOfAdultsPerRoom;
 
-    private Integer testnumberOfAdultsPerRoom;
+//    private Integer noOfAdultsPerRoom;
+
+    private String noOfAdultsPerRoom;
 
     public Date getCheckInDate() {
         return checkInDate;
@@ -51,14 +53,25 @@ public class SearchReservationRequest {
 //    }
 
 
-    public Integer getTestnumberOfAdultsPerRoom()
+//    public Integer getNoOfAdultsPerRoom()
+//    {
+//        return noOfAdultsPerRoom;
+//    }
+//
+//    public void setNoOfAdultsPerRoom( Integer noOfAdultsPerRoom )
+//    {
+//        this.noOfAdultsPerRoom = noOfAdultsPerRoom;
+//    }
+
+
+    public String getNoOfAdultsPerRoom()
     {
-        return testnumberOfAdultsPerRoom;
+        return noOfAdultsPerRoom;
     }
 
-    public void setTestnumberOfAdultsPerRoom( Integer testnumberOfAdultsPerRoom )
+    public void setNoOfAdultsPerRoom( String noOfAdultsPerRoom )
     {
-        this.testnumberOfAdultsPerRoom = testnumberOfAdultsPerRoom;
+        this.noOfAdultsPerRoom = noOfAdultsPerRoom;
     }
 
     @Override public String toString()
@@ -67,7 +80,7 @@ public class SearchReservationRequest {
                 "checkInDate=" + checkInDate +
                 ", numberOfNights=" + numberOfNights +
                 ", numberOfRooms=" + numberOfRooms +
-                ", testnumberOfAdultsPerRoom=" + testnumberOfAdultsPerRoom +
+                ", noOfAdultsPerRoom=" + noOfAdultsPerRoom +
                 '}';
     }
 }
