@@ -1,4 +1,4 @@
-package com.codegen.suntravels.responses;
+package com.codegen.suntravels.entityResponses;
 
 /**
  * Created by DELL on 12/2/2017.

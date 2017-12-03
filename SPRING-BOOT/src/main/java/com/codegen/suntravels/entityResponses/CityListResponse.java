@@ -1,9 +1,9 @@
-package com.codegen.suntravels.responses;
+package com.codegen.suntravels.entityResponses;
 
 /**
  * Created by DELL on 12/2/2017.
  */
-public class CityResponse {
+public class CityListResponse {
 
     private Integer cityID;
     private String cityName;
@@ -35,7 +35,7 @@ public class CityResponse {
 
     @Override
     public String toString() {
-        return "CityResponse{" +
+        return "CityListResponse{" +
                 "cityID=" + cityID +
                 ", cityName='" + cityName + '\'' +
                 ", countryName='" + countryName + '\'' +

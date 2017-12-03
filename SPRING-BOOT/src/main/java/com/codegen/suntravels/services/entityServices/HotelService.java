@@ -4,9 +4,9 @@ import com.codegen.suntravels.DAO.entityDAO.CityDAO;
 import com.codegen.suntravels.DAO.entityDAO.CountryDAO;
 import com.codegen.suntravels.DAO.entityDAO.HotelDAO;
 import com.codegen.suntravels.entities.Hotel;
-import com.codegen.suntravels.requests.AddHotelRequest;
-import com.codegen.suntravels.responses.AddEntityResponse;
-import com.codegen.suntravels.responses.HotelListResponse;
+import com.codegen.suntravels.entityRequests.AddHotelRequest;
+import com.codegen.suntravels.entityResponses.AddEntityResponse;
+import com.codegen.suntravels.entityResponses.HotelListResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -25,12 +25,12 @@ public class HotelService {
     @Autowired
     private CityDAO cityDAO;
 
-    /**
-     * Currently existing hotel list
-     */
-    List<Hotel> list = hotelDAO.getHotelList();
-
     public List<HotelListResponse> getHotelList() {
+
+        /**
+         * Currently existing hotel list
+         */
+        List<Hotel> list = hotelDAO.getHotelList();
 
         List<HotelListResponse> response = new ArrayList<>();
 
@@ -51,37 +51,48 @@ public class HotelService {
 
     public AddEntityResponse addHotel(AddHotelRequest request) {
 
+        /**
+         * Currently existing hotel list
+         */
+        List<Hotel> list = hotelDAO.getHotelList();
+
         AddEntityResponse response = new AddEntityResponse();
         Hotel hotel = new Hotel();
 
+        Integer nextCheckPoint = 0;
         for (Hotel h : list) {
 
-            if (h.getHotelPhoneNumber() == request.getHotelPhoneNumber()) {
+            if (h.getHotelPhoneNumber().equals(request.getHotelPhoneNumber())) {
                 // two hotels can't have the same phone number
                 response.setInsertingStatus(false);
                 response.setEntity(null);
                 response.setMessage("A hotel already exists with the given phone number : " + request.getHotelPhoneNumber());
                 break;
-            } else if (h.getHotelName() == request.getHotelName() &&
-                    cityDAO.getCityByID(h.getCityID()).getCityName() == request.getCityName() &&
-                    countryDAO.getCountryByID(h.getCountryID()).getCountryName() == request.getCountryName()) {
+            } else if (h.getHotelName().equals(request.getHotelName()) &&
+                    cityDAO.getCityByID(h.getCityID()).getCityName().equals(request.getCityName())&&
+                    countryDAO.getCountryByID(h.getCountryID()).getCountryName().equals(request.getCountryName())) {
                 response.setInsertingStatus(false);
                 response.setEntity(null);
                 response.setMessage("A hotel already exists with the given hotel name : " + request.getHotelName() +
                         " ,given city name : " + request.getCityName() + " , and the given country name : " + request.getCountryName());
                 break;
             } else {
-                hotel.setHotelName(request.getHotelName());
-                hotel.setHotelPhoneNumber(request.getHotelPhoneNumber());
-                hotel.setCountryID(countryDAO.getCountryByName(request.getCountryName()).getCountryID());
-                hotel.setCityID(cityDAO.getCityByName(request.getCityName()).getCityID());
-
-                hotelDAO.addHotel(hotel);
-
-                response.setInsertingStatus(true);
-                response.setEntity(hotel);
-                response.setMessage("New hotel successfully added to the system");
+                nextCheckPoint ++;
             }
+        }
+
+        if(nextCheckPoint == list.size()){
+
+            hotel.setHotelName(request.getHotelName());
+            hotel.setHotelPhoneNumber(request.getHotelPhoneNumber());
+            hotel.setCountryID(countryDAO.getCountryByName(request.getCountryName()).getCountryID());
+            hotel.setCityID(cityDAO.getCityByName(request.getCityName()).getCityID());
+
+            hotelDAO.addHotel(hotel);
+
+            response.setInsertingStatus(true);
+            response.setEntity(hotel);
+            response.setMessage("New hotel successfully added to the system");
         }
 
         return response;
@@ -104,9 +115,12 @@ public class HotelService {
 
     public List<HotelListResponse> getHotelByName(String name) {
 
-        List<HotelListResponse> response = new ArrayList<>();
-
+        /**
+         * Currently existing hotel list
+         */
         List<Hotel> list = hotelDAO.getHotelByName(name);
+
+        List<HotelListResponse> response = new ArrayList<>();
 
         for (Hotel hotel : list) {
 

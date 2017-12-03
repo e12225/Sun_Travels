@@ -21,6 +21,6 @@ public interface CountryRepository extends JpaRepository<Country, Long>{
     /**
      * Retrieving the countries filtered by countryName
      */
-    @Query("SELECT co FROM Country co WHERE co.countryName = :coName")
+    @Query("SELECT co FROM Country co WHERE co.countryName LIKE CONCAT('%',:coName,'%')")
     Country getCountryByName(@Param("coName") String countryName);
 }

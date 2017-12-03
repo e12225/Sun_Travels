@@ -1,4 +1,4 @@
-package com.codegen.suntravels.logics;
+package com.codegen.suntravels.searchResponses;
 
 /**
  * Created by DELL on 11/19/2017.

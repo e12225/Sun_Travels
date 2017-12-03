@@ -8,6 +8,7 @@ import com.codegen.suntravels.entities.ContractDetails;
 import com.codegen.suntravels.entities.Hotel;
 import com.codegen.suntravels.entities.RoomType;
 import com.codegen.suntravels.searchRequests.SearchReservationRequest;
+import com.codegen.suntravels.searchResponses.AvailableReservationComposer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

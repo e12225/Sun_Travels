@@ -1,18 +1,14 @@
 package com.codegen.suntravels.controllers.entityControllers;
 
-import com.codegen.suntravels.requests.AddHotelRequest;
-import com.codegen.suntravels.responses.AddEntityResponse;
-import com.codegen.suntravels.responses.HotelListResponse;
+import com.codegen.suntravels.entityRequests.AddHotelRequest;
+import com.codegen.suntravels.entityResponses.AddEntityResponse;
+import com.codegen.suntravels.entityResponses.HotelListResponse;
 import com.codegen.suntravels.services.entityServices.CityService;
 import com.codegen.suntravels.services.entityServices.CountryService;
 import com.codegen.suntravels.services.entityServices.HotelService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
-import javax.websocket.server.PathParam;
 import java.util.List;
 
 @RestController
@@ -34,7 +30,7 @@ public class HotelController {
     }
 
     @RequestMapping(method = RequestMethod.GET, path = "/list/{hotelID}")
-    public HotelListResponse getHotelByID(@PathParam("hotelID") Integer hotelID) {
+    public HotelListResponse getHotelByID(@PathVariable("hotelID") Integer hotelID) {
         return hotelService.getHotelByID(hotelID);
     }
 
@@ -44,7 +40,7 @@ public class HotelController {
     }
 
     @RequestMapping(method = RequestMethod.GET, path = "/listByName/{hotelName}")
-    public List<HotelListResponse> getHotelByName(@RequestBody String hotelName){
+    public List<HotelListResponse> getHotelByName(@PathVariable("hotelName") String hotelName){
         return hotelService.getHotelByName(hotelName);
     }
 }

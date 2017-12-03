@@ -1,7 +1,7 @@
 package com.codegen.suntravels.controllers.entityControllers;
 
 import com.codegen.suntravels.entities.City;
-import com.codegen.suntravels.responses.CityResponse;
+import com.codegen.suntravels.entityResponses.CityListResponse;
 import com.codegen.suntravels.services.entityServices.CityService;
 import com.codegen.suntravels.services.entityServices.CountryService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,15 +27,15 @@ public class CityController {
     private CountryService countryService;
 
     @RequestMapping(method = RequestMethod.GET, path = "/list")
-    public List<CityResponse> getCityList(){
+    public List<CityListResponse> getCityList(){
 
-        List<CityResponse> response = new ArrayList<>();
+        List<CityListResponse> response = new ArrayList<>();
 
         List<City> list = cityService.getCityList();
 
         for(City city : list){
 
-            CityResponse r = new CityResponse();
+            CityListResponse r = new CityListResponse();
 
             r.setCityID(city.getCityID());
             r.setCityName(city.getCityName());

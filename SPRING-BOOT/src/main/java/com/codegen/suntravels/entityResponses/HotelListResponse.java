@@ -1,14 +1,23 @@
-package com.codegen.suntravels.requests;
+package com.codegen.suntravels.entityResponses;
 
 /**
  * Created by DELL on 12/2/2017.
  */
-public class AddHotelRequest {
+public class HotelListResponse {
 
+    private Integer hotelID;
     private String hotelName;
     private Long hotelPhoneNumber;
     private String countryName;
     private String cityName;
+
+    public Integer getHotelID() {
+        return hotelID;
+    }
+
+    public void setHotelID(Integer hotelID) {
+        this.hotelID = hotelID;
+    }
 
     public String getHotelName() {
         return hotelName;
@@ -44,11 +53,12 @@ public class AddHotelRequest {
 
     @Override
     public String toString() {
-        return "addHotelRequest{" +
-                "hotelName='" + hotelName + '\'' +
+        return "HotelListResponse{" +
+                "hotelID=" + hotelID +
+                ", hotelName='" + hotelName + '\'' +
                 ", hotelPhoneNumber=" + hotelPhoneNumber +
-                ", countryName='" + countryName + '\'' +
-                ", cityName='" + cityName + '\'' +
+                ", countryName=" + countryName +
+                ", cityName=" + cityName +
                 '}';
     }
 }

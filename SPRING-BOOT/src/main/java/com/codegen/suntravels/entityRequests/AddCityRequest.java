@@ -1,4 +1,4 @@
-package com.codegen.suntravels.requests;
+package com.codegen.suntravels.entityRequests;
 
 /**
  * Created by DELL on 12/2/2017.

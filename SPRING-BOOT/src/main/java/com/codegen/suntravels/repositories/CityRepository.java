@@ -21,6 +21,6 @@ public interface CityRepository extends JpaRepository<City, Long> {
     /**
      * Retrieving the cities filtered by cityName
      */
-    @Query("SELECT c FROM City c WHERE c.cityName = :cName")
+    @Query("SELECT c FROM City c WHERE c.cityName LIKE CONCAT('%',:cName,'%')")
     City getCityByName(@Param("cName") String cityName);
 }

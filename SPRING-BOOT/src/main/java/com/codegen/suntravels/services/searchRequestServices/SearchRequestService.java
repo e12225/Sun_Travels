@@ -5,7 +5,7 @@ import com.codegen.suntravels.DAO.entityDAO.ContractDetailsDAO;
 import com.codegen.suntravels.DAO.requestDAO.SearchRequestDAO;
 import com.codegen.suntravels.entities.Contract;
 import com.codegen.suntravels.entities.ContractDetails;
-import com.codegen.suntravels.logics.AvailableReservationComposer;
+import com.codegen.suntravels.searchResponses.AvailableReservationComposer;
 import com.codegen.suntravels.searchRequests.SearchReservationRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

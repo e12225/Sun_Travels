@@ -18,6 +18,6 @@ public interface RoomTypeRepository extends JpaRepository<RoomType, Long> {
     /**
      * Retrieving the room types filtered by roomTypeName
      */
-    @Query("SELECT r FROM RoomType r WHERE r.roomTypeName = :rtName")
+    @Query("SELECT r FROM RoomType r WHERE r.roomTypeName LIKE CONCAT('%',:rtName,'%')")
     RoomType getRoomTypeByName(@Param("rtName") String roomTypeName);
 }

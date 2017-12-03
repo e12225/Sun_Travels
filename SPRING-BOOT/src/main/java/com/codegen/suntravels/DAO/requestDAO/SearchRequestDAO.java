@@ -2,7 +2,7 @@ package com.codegen.suntravels.DAO.requestDAO;
 
 import com.codegen.suntravels.entities.Contract;
 import com.codegen.suntravels.entities.ContractDetails;
-import com.codegen.suntravels.logics.AvailableReservationComposer;
+import com.codegen.suntravels.searchResponses.AvailableReservationComposer;
 import com.codegen.suntravels.logics.ContractValidityChecker;
 import com.codegen.suntravels.logics.RoomsAvailabilityChecker;
 import com.codegen.suntravels.searchRequests.SearchReservationRequest;

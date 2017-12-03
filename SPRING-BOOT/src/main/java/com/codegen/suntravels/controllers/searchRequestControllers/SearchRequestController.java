@@ -1,6 +1,6 @@
 package com.codegen.suntravels.controllers.searchRequestControllers;
 
-import com.codegen.suntravels.logics.AvailableReservationComposer;
+import com.codegen.suntravels.searchResponses.AvailableReservationComposer;
 import com.codegen.suntravels.searchRequests.SearchReservationRequest;
 import com.codegen.suntravels.services.searchRequestServices.SearchRequestService;
 import org.springframework.beans.factory.annotation.Autowired;
