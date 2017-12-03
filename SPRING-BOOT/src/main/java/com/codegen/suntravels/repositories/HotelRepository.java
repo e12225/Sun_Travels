@@ -6,6 +6,8 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Repository
 public interface HotelRepository extends JpaRepository<Hotel, Long> {
 
@@ -19,6 +21,5 @@ public interface HotelRepository extends JpaRepository<Hotel, Long> {
      * Retrieving the hotels filtered by hotelName
      */
     @Query("SELECT h FROM Hotel h WHERE h.hotelName = :htName")
-    Hotel getHotelByName(@Param("htName") String hotelName);
-
+    List<Hotel> getHotelByName(@Param("htName") String hotelName);
 }

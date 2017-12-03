@@ -1,6 +1,10 @@
 package com.codegen.suntravels.controllers.entityControllers;
 
-import com.codegen.suntravels.entities.Hotel;
+import com.codegen.suntravels.requests.AddHotelRequest;
+import com.codegen.suntravels.responses.AddEntityResponse;
+import com.codegen.suntravels.responses.HotelListResponse;
+import com.codegen.suntravels.services.entityServices.CityService;
+import com.codegen.suntravels.services.entityServices.CountryService;
 import com.codegen.suntravels.services.entityServices.HotelService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -18,18 +22,29 @@ public class HotelController {
     @Autowired
     private HotelService hotelService;
 
+    @Autowired
+    private CityService cityService;
+
+    @Autowired
+    private CountryService countryService;
+
     @RequestMapping(method = RequestMethod.GET, path = "/list")
-    public List<Hotel> getHotelList(){
+    public List<HotelListResponse> getHotelList() {
         return hotelService.getHotelList();
     }
 
     @RequestMapping(method = RequestMethod.GET, path = "/list/{hotelID}")
-    public Hotel getHotelByID(@PathParam("hotelID") Integer hotelID){
+    public HotelListResponse getHotelByID(@PathParam("hotelID") Integer hotelID) {
         return hotelService.getHotelByID(hotelID);
     }
 
     @RequestMapping(method = RequestMethod.POST, path = "/add")
-    public void addHotel(@RequestBody Hotel hotel){
-        hotelService.addHotel(hotel);
+    public AddEntityResponse addHotel(@RequestBody AddHotelRequest request) {
+        return hotelService.addHotel(request);
+    }
+
+    @RequestMapping(method = RequestMethod.GET, path = "/listByName/{hotelName}")
+    public List<HotelListResponse> getHotelByName(@RequestBody String hotelName){
+        return hotelService.getHotelByName(hotelName);
     }
 }

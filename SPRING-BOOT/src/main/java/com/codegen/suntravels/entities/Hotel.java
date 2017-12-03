@@ -1,7 +1,6 @@
 package com.codegen.suntravels.entities;
 
 import javax.persistence.*;
-import java.io.Serializable;
 
 @Entity
 @Table(name = "SM_HOTEL", schema = "SYS", catalog = "")

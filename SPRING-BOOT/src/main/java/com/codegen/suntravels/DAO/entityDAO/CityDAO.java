@@ -20,6 +20,14 @@ public class CityDAO {
         return cityRepository.findAll();
     }
 
+    public City getCityByID(Integer cityID){
+        return cityRepository.getCityByID(cityID);
+    }
+
+    public City getCityByName(String cityName){
+        return cityRepository.getCityByName(cityName);
+    }
+
     public void addCity(City city){
         cityRepository.save(city);
     }

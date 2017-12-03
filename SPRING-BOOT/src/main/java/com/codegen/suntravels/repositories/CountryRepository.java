@@ -2,6 +2,8 @@ package com.codegen.suntravels.repositories;
 
 import com.codegen.suntravels.entities.Country;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -9,4 +11,16 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface CountryRepository extends JpaRepository<Country, Long>{
+
+    /**
+     * Retrieving the countries filtered by countryID
+     */
+    @Query("SELECT co FROM Country co WHERE co.countryID = :coID")
+    Country getCountryByID(@Param("coID") Integer countryID);
+
+    /**
+     * Retrieving the countries filtered by countryName
+     */
+    @Query("SELECT co FROM Country co WHERE co.countryName = :coName")
+    Country getCountryByName(@Param("coName") String countryName);
 }

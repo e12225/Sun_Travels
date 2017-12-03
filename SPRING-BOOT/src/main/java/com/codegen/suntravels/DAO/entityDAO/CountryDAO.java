@@ -20,6 +20,14 @@ public class CountryDAO {
         return countryRepository.findAll();
     }
 
+    public Country getCountryByID(Integer countryID){
+        return countryRepository.getCountryByID(countryID);
+    }
+
+    public Country getCountryByName(String countryName){
+        return countryRepository.getCountryByName(countryName);
+    }
+
     public void addCountry(Country country){
         countryRepository.save(country);
     }

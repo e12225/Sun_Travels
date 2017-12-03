@@ -50,7 +50,6 @@ public class SearchRequestService
             }
         }
 
-        //TODO : log, if the list is null
         return availableReservations;
     }
 }

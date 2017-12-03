@@ -25,7 +25,7 @@ public class HotelDAO {
         return hotelRepository.getHotelByID(hotelID);
     }
 
-    public Hotel getHotelByName(String hotelName){
+    public List<Hotel> getHotelByName(String hotelName){
         return hotelRepository.getHotelByName(hotelName);
     }
 }

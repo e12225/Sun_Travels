@@ -20,6 +20,10 @@ public class CityService {
         return this.cityDAO.getCityList();
     }
 
+    public City getCityByID(Integer cityID){
+        return this.cityDAO.getCityByID(cityID);
+    }
+
     public void addCity(City city){
         this.cityDAO.addCity(city);
     }

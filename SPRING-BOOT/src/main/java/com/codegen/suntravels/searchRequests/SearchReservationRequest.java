@@ -1,7 +1,6 @@
 package com.codegen.suntravels.searchRequests;
 
 import java.sql.Date;
-import java.util.ArrayList;
 
 /**
  * Created by DELL on 11/16/2017.
@@ -14,11 +13,9 @@ public class SearchReservationRequest {
 
     private Integer numberOfRooms;
 
-//    private ArrayList<Integer> noOfAdultsPerRoom;
+    private Integer totalAdults;
 
-//    private Integer noOfAdultsPerRoom;
-
-    private String noOfAdultsPerRoom;
+    private Integer requestedMaxAdultsPerRoom;
 
     public Date getCheckInDate() {
         return checkInDate;
@@ -44,43 +41,30 @@ public class SearchReservationRequest {
         this.numberOfRooms = numberOfRooms;
     }
 
-//    public ArrayList<Integer> getNoOfAdultsPerRoom() {
-//        return noOfAdultsPerRoom;
-//    }
-//
-//    public void setNoOfAdultsPerRoom(ArrayList<Integer> noOfAdultsPerRoom) {
-//        this.noOfAdultsPerRoom = noOfAdultsPerRoom;
-//    }
-
-
-//    public Integer getNoOfAdultsPerRoom()
-//    {
-//        return noOfAdultsPerRoom;
-//    }
-//
-//    public void setNoOfAdultsPerRoom( Integer noOfAdultsPerRoom )
-//    {
-//        this.noOfAdultsPerRoom = noOfAdultsPerRoom;
-//    }
-
-
-    public String getNoOfAdultsPerRoom()
-    {
-        return noOfAdultsPerRoom;
+    public Integer getTotalAdults() {
+        return totalAdults;
     }
 
-    public void setNoOfAdultsPerRoom( String noOfAdultsPerRoom )
-    {
-        this.noOfAdultsPerRoom = noOfAdultsPerRoom;
+    public void setTotalAdults(Integer totalAdults) {
+        this.totalAdults = totalAdults;
     }
 
-    @Override public String toString()
-    {
+    public Integer getRequestedMaxAdultsPerRoom() {
+        return requestedMaxAdultsPerRoom;
+    }
+
+    public void setRequestedMaxAdultsPerRoom(Integer requestedMaxAdultsPerRoom) {
+        this.requestedMaxAdultsPerRoom = requestedMaxAdultsPerRoom;
+    }
+
+    @Override
+    public String toString() {
         return "SearchReservationRequest{" +
                 "checkInDate=" + checkInDate +
                 ", numberOfNights=" + numberOfNights +
                 ", numberOfRooms=" + numberOfRooms +
-                ", noOfAdultsPerRoom=" + noOfAdultsPerRoom +
+                ", totalAdults=" + totalAdults +
+                ", requestedMaxAdultsPerRoom=" + requestedMaxAdultsPerRoom +
                 '}';
     }
 }

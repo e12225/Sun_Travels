@@ -20,6 +20,10 @@ public class CountryService {
         return this.countryDAO.getCountryList();
     }
 
+    public Country getCountryByID(Integer countryID){
+        return this.countryDAO.getCountryByID(countryID);
+    }
+
     public void addCountry(Country country){
         this.countryDAO.addCountry(country);
     }
