@@ -28,6 +28,10 @@ public class CountryDAO {
         return countryRepository.getCountryByName(countryName);
     }
 
+    public List<Country> getCountryByNameOrAlias(String countryName){
+        return countryRepository.getCountryByNameOrAlias(countryName);
+    }
+
     public void addCountry(Country country){
         countryRepository.save(country);
     }

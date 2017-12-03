@@ -24,6 +24,10 @@ public class CityService {
         return this.cityDAO.getCityByID(cityID);
     }
 
+    public List<City> getCityByNameOrAlias(String cityName){
+        return this.cityDAO.getCityByNameOrAlias(cityName);
+    }
+
     public void addCity(City city){
         this.cityDAO.addCity(city);
     }

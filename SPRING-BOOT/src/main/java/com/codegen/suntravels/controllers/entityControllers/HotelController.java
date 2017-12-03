@@ -40,7 +40,7 @@ public class HotelController {
     }
 
     @RequestMapping(method = RequestMethod.GET, path = "/listByName/{hotelName}")
-    public List<HotelListResponse> getHotelByName(@PathVariable("hotelName") String hotelName){
-        return hotelService.getHotelByName(hotelName);
+    public List<HotelListResponse> getHotelByNameOrAlias(@PathVariable("hotelName") String hotelName){
+        return hotelService.getHotelByNameOrAlias(hotelName);
     }
 }

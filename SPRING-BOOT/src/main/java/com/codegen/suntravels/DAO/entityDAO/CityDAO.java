@@ -28,6 +28,10 @@ public class CityDAO {
         return cityRepository.getCityByName(cityName);
     }
 
+    public List<City> getCityByNameOrAlias(String cityName){
+        return cityRepository.getCityByNameOrAlias(cityName);
+    }
+
     public void addCity(City city){
         cityRepository.save(city);
     }
