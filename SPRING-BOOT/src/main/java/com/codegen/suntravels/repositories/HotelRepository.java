@@ -18,6 +18,12 @@ public interface HotelRepository extends JpaRepository<Hotel, Long> {
     Hotel getHotelByID(@Param("htID") Integer hotelID);
 
     /**
+     * Retrieving the hotel filtered by hotelName
+     */
+    @Query("SELECT h FROM Hotel h WHERE h.hotelName = :htName")
+    Hotel getHotelByName(@Param("htName") String hotelName);
+
+    /**
      * Retrieving the hotels filtered by partial or full hotelName
      */
     @Query("SELECT h FROM Hotel h WHERE h.hotelName LIKE CONCAT('%',:htName,'%')")

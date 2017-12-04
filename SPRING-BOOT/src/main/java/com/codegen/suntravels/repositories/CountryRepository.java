@@ -21,7 +21,7 @@ public interface CountryRepository extends JpaRepository<Country, Long>{
     Country getCountryByID(@Param("coID") Integer countryID);
 
     /**
-     * Retrieving the countries filtered by countryName
+     * Retrieving the country filtered by countryName
      */
     @Query("SELECT co FROM Country co WHERE co.countryName = :coName")
     Country getCountryByName(@Param("coName") String countryName);

@@ -1,6 +1,7 @@
 package com.codegen.suntravels.DAO.entityDAO;
 
 import com.codegen.suntravels.entities.Contract;
+import com.codegen.suntravels.entityResponses.ContractListResponse;
 import com.codegen.suntravels.repositories.ContractRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -24,7 +25,7 @@ public class ContractDAO {
         return contractRepository.getContractByID(contractID);
     }
 
-    public Contract getContractByHotelID(Integer hotelID){
+    public List<Contract> getContractByHotelID( Integer hotelID){
         return contractRepository.getContractByHotelID(hotelID);
     }
 

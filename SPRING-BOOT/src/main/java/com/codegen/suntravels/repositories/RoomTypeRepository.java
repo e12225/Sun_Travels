@@ -6,6 +6,8 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Repository
 public interface RoomTypeRepository extends JpaRepository<RoomType, Long> {
 
@@ -16,8 +18,14 @@ public interface RoomTypeRepository extends JpaRepository<RoomType, Long> {
     RoomType getRoomTypeByID(@Param("rtID") Integer roomTypeID);
 
     /**
-     * Retrieving the room types filtered by roomTypeName
+     * Retrieving the room type filtered by roomTypeName
+     */
+    @Query("SELECT r FROM RoomType r WHERE r.roomTypeName = :rtName")
+    RoomType getRoomTypeByName(@Param("rtName") String roomTypeName);
+
+    /**
+     * Retrieving the room types filtered by partial or full roomTypeName
      */
     @Query("SELECT r FROM RoomType r WHERE r.roomTypeName LIKE CONCAT('%',:rtName,'%')")
-    RoomType getRoomTypeByName(@Param("rtName") String roomTypeName);
+    List<RoomType> getRoomTypeByNameOrAlias( @Param("rtName") String roomTypeName);
 }

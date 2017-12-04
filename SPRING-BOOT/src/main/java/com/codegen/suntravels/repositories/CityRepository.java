@@ -21,7 +21,7 @@ public interface CityRepository extends JpaRepository<City, Long> {
     City getCityByID(@Param("cID") Integer cityID);
 
     /**
-     * Retrieving the cities filtered by cityName
+     * Retrieving the city filtered by cityName
      */
     @Query("SELECT c FROM City c WHERE c.cityName = :cName")
     City getCityByName(@Param("cName") String cityName);
