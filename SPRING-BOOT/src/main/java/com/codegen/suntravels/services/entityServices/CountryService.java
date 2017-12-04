@@ -24,6 +24,10 @@ public class CountryService {
         return this.countryDAO.getCountryByID(countryID);
     }
 
+    public List<Country> getCountryByNameOrAlias(String countryName){
+        return this.countryDAO.getCountryByNameOrAlias(countryName);
+    }
+
     public void addCountry(Country country){
         this.countryDAO.addCountry(country);
     }

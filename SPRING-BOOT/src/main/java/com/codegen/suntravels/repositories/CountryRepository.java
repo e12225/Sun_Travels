@@ -6,6 +6,8 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 /**
  * Created by DELL on 11/18/2017.
  */
@@ -21,6 +23,12 @@ public interface CountryRepository extends JpaRepository<Country, Long>{
     /**
      * Retrieving the countries filtered by countryName
      */
-    @Query("SELECT co FROM Country co WHERE co.countryName LIKE CONCAT('%',:coName,'%')")
+    @Query("SELECT co FROM Country co WHERE co.countryName = :coName")
     Country getCountryByName(@Param("coName") String countryName);
+
+    /**
+     * Retrieving the countries filtered by partial or full countryName
+     */
+    @Query("SELECT co FROM Country co WHERE co.countryName LIKE CONCAT('%',:coName,'%')")
+    List<Country> getCountryByNameOrAlias(@Param("coName") String countryName);
 }

@@ -3,10 +3,7 @@ package com.codegen.suntravels.controllers.entityControllers;
 import com.codegen.suntravels.entities.Country;
 import com.codegen.suntravels.services.entityServices.CountryService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -23,6 +20,11 @@ public class CountryController {
     @RequestMapping(method = RequestMethod.GET, path = "/list")
     public List<Country> getCountryList(){
         return countryService.getCountryList();
+    }
+
+    @RequestMapping(method = RequestMethod.GET, path = "/listByName/{countryName}")
+    public List<Country> getCountryByNameOrAlias(@PathVariable("countryName") String countryName){
+        return countryService.getCountryByNameOrAlias(countryName);
     }
 
     @RequestMapping(method = RequestMethod.POST, path = "/add")

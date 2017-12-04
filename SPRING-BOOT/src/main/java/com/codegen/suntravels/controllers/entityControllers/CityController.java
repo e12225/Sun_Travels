@@ -2,12 +2,8 @@ package com.codegen.suntravels.controllers.entityControllers;
 
 import com.codegen.suntravels.entities.City;
 import com.codegen.suntravels.services.entityServices.CityService;
-import com.codegen.suntravels.services.entityServices.CountryService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -21,16 +17,18 @@ public class CityController {
     @Autowired
     private CityService cityService;
 
-    @Autowired
-    private CountryService countryService;
-
     @RequestMapping(method = RequestMethod.GET, path = "/list")
-    public List<City> getCityList(){
+    public List<City> getCityList() {
         return cityService.getCityList();
     }
 
+    @RequestMapping(method = RequestMethod.GET, path = "/listByName/{cityName}")
+    public List<City> getCityyByNameOrAlias(@PathVariable("cityName") String cityName) {
+        return cityService.getCityByNameOrAlias(cityName);
+    }
+
     @RequestMapping(method = RequestMethod.POST, path = "/add")
-    public void addCity(@RequestBody City city){
+    public void addCity(@RequestBody City city) {
         cityService.addCity(city);
     }
 }

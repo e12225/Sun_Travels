@@ -3,6 +3,8 @@ package com.codegen.suntravels.services.entityServices;
 import com.codegen.suntravels.DAO.entityDAO.CityDAO;
 import com.codegen.suntravels.DAO.entityDAO.CountryDAO;
 import com.codegen.suntravels.DAO.entityDAO.HotelDAO;
+import com.codegen.suntravels.entities.City;
+import com.codegen.suntravels.entities.Country;
 import com.codegen.suntravels.entities.Hotel;
 import com.codegen.suntravels.entityRequests.AddHotelRequest;
 import com.codegen.suntravels.entityResponses.AddEntityResponse;
@@ -51,48 +53,63 @@ public class HotelService {
 
     public AddEntityResponse addHotel(AddHotelRequest request) {
 
-        /**
-         * Currently existing hotel list
-         */
-        List<Hotel> list = hotelDAO.getHotelList();
-
         AddEntityResponse response = new AddEntityResponse();
-        Hotel hotel = new Hotel();
 
-        Integer nextCheckPoint = 0;
-        for (Hotel h : list) {
+        Country co = countryDAO.getCountryByName(request.getCountryName());
+        City ci = cityDAO.getCityByName(request.getCityName());
 
-            if (h.getHotelPhoneNumber().equals(request.getHotelPhoneNumber())) {
-                // two hotels can't have the same phone number
-                response.setInsertingStatus(false);
-                response.setEntity(null);
-                response.setMessage("A hotel already exists with the given phone number : " + request.getHotelPhoneNumber());
-                break;
-            } else if (h.getHotelName().equals(request.getHotelName()) &&
-                    cityDAO.getCityByID(h.getCityID()).getCityName().equals(request.getCityName())&&
-                    countryDAO.getCountryByID(h.getCountryID()).getCountryName().equals(request.getCountryName())) {
-                response.setInsertingStatus(false);
-                response.setEntity(null);
-                response.setMessage("A hotel already exists with the given hotel name : " + request.getHotelName() +
-                        " ,given city name : " + request.getCityName() + " , and the given country name : " + request.getCountryName());
-                break;
-            } else {
-                nextCheckPoint ++;
+        if (co == null) {
+            response.setInsertingStatus(false);
+            response.setEntity(null);
+            response.setMessage("A country named " + request.getCountryName() + " doesn't exist in the system");
+        } else if (ci == null) {
+            response.setInsertingStatus(false);
+            response.setEntity(null);
+            response.setMessage("A city named " + request.getCityName() + " doesn't exist in the system");
+        } else {
+
+            /**
+             * Currently existing hotel list
+             */
+            List<Hotel> list = hotelDAO.getHotelList();
+
+            Hotel hotel = new Hotel();
+
+            Integer nextCheckPoint = 0;
+            for (Hotel h : list) {
+
+                if (h.getHotelPhoneNumber().equals(request.getHotelPhoneNumber())) {
+                    // two hotels can't have the same phone number
+                    response.setInsertingStatus(false);
+                    response.setEntity(null);
+                    response.setMessage("A hotel already exists with the given phone number : " + request.getHotelPhoneNumber());
+                    break;
+                } else if (h.getHotelName().equals(request.getHotelName()) &&
+                        cityDAO.getCityByID(h.getCityID()).getCityName().equals(ci.getCityName()) &&
+                        countryDAO.getCountryByID(h.getCountryID()).getCountryName().equals(co.getCountryName())) {
+                    response.setInsertingStatus(false);
+                    response.setEntity(null);
+                    response.setMessage("A hotel already exists with the given hotel name : " + request.getHotelName() +
+                            " ,given city name : " + request.getCityName() + " , and the given country name : " + request.getCountryName());
+                    break;
+                } else {
+                    nextCheckPoint++;
+                }
             }
-        }
 
-        if(nextCheckPoint == list.size()){
+            if (nextCheckPoint == list.size()) {
 
-            hotel.setHotelName(request.getHotelName());
-            hotel.setHotelPhoneNumber(request.getHotelPhoneNumber());
-            hotel.setCountryID(countryDAO.getCountryByName(request.getCountryName()).getCountryID());
-            hotel.setCityID(cityDAO.getCityByName(request.getCityName()).getCityID());
+                hotel.setHotelName(request.getHotelName());
+                hotel.setHotelPhoneNumber(request.getHotelPhoneNumber());
+                hotel.setCountryID(countryDAO.getCountryByName(co.getCountryName()).getCountryID());
+                hotel.setCityID(cityDAO.getCityByName(ci.getCityName()).getCityID());
 
-            hotelDAO.addHotel(hotel);
+                hotelDAO.addHotel(hotel);
 
-            response.setInsertingStatus(true);
-            response.setEntity(hotel);
-            response.setMessage("New hotel successfully added to the system");
+                response.setInsertingStatus(true);
+                response.setEntity(hotel);
+                response.setMessage("New hotel successfully added to the system");
+            }
         }
 
         return response;
@@ -113,12 +130,12 @@ public class HotelService {
         return response;
     }
 
-    public List<HotelListResponse> getHotelByName(String name) {
+    public List<HotelListResponse> getHotelByNameOrAlias(String name) {
 
         /**
          * Currently existing hotel list
          */
-        List<Hotel> list = hotelDAO.getHotelByName(name);
+        List<Hotel> list = hotelDAO.getHotelByNameOrAlias(name);
 
         List<HotelListResponse> response = new ArrayList<>();
 
