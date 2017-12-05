@@ -17,11 +17,15 @@ public class RoomTypeService {
         return this.roomTypeDAO.getRoomTypeList();
     }
 
-    public void addRoomType(RoomType roomType){
-        this.roomTypeDAO.addRoomType(roomType);
-    }
-
     public RoomType getRoomTypeByID(Integer roomTypeID){
         return this.roomTypeDAO.getRoomTypeByID(roomTypeID);
+    }
+
+    public List<RoomType> getRoomTypeByNameOrAlias(String roomTypeName){
+        return this.roomTypeDAO.getRoomTypeByNameOrAlias( roomTypeName );
+    }
+
+    public void addRoomType(RoomType roomType){
+        this.roomTypeDAO.addRoomType(roomType);
     }
 }

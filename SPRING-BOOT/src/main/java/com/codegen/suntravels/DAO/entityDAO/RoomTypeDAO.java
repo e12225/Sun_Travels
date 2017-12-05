@@ -25,6 +25,10 @@ public class RoomTypeDAO {
         return roomTypeRepository.getRoomTypeByName(roomTypeName);
     }
 
+    public List<RoomType> getRoomTypeByNameOrAlias(String roomTypeName){
+        return roomTypeRepository.getRoomTypeByNameOrAlias( roomTypeName );
+    }
+
     public void addRoomType(RoomType roomType){
         roomTypeRepository.save(roomType);
     }

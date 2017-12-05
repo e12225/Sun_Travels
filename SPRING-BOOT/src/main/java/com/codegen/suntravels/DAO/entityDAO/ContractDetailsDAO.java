@@ -24,8 +24,8 @@ public class ContractDetailsDAO {
         return contractDetailsRepository.getCtrDetailsList(contractID);
     }
 
-    public ContractDetails getCtrDetailsByCtrIDnRmTypeID(Integer contractID, Integer roomTypeID){
-        return contractDetailsRepository.getCtrDetailsByCtrIDnRmTypeID(contractID, roomTypeID);
+    public List<ContractDetails> getCtrDetailsByRoomTypeID(Integer roomTypeID){
+        return contractDetailsRepository.getCtrDetailsByRoomTypeID( roomTypeID );
     }
 
     public void addContractDetails(ContractDetails contractDetails){
@@ -33,6 +33,6 @@ public class ContractDetailsDAO {
     }
 
     public void updateContractDetails(ContractDetails contractDetails){
-
+        //TODO : complete this
     }
 }

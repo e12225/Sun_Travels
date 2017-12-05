@@ -54,16 +54,17 @@ public class ContractService
         Contract contract = contractDAO.getContractByID( contractID );
 
         response.setContractID( contract.getContractID() );
-        response.setHotelName(hotelDAO.getHotelByID( contract.getHotelID() ).getHotelName());
+        response.setHotelName( hotelDAO.getHotelByID( contract.getHotelID() ).getHotelName() );
 
         return response;
     }
 
     public List<ContractListResponse> getContractByHotelID( Integer hotelID )
     {
-        List<Contract> list = contractDAO.getContractByHotelID( hotelID );
 
         List<ContractListResponse> response = new ArrayList<>();
+
+        List<Contract> list = contractDAO.getContractByHotelID( hotelID );
 
         for( Contract c : list )
         {
@@ -71,6 +72,34 @@ public class ContractService
 
             r.setContractID( c.getContractID() );
             r.setHotelName( hotelDAO.getHotelByID( hotelID ).getHotelName() );
+            response.add( r );
+        }
+
+        return response;
+    }
+
+    public List<ContractListResponse> getContractByHotelName( String hotelName )
+    {
+
+        List<ContractListResponse> response = new ArrayList<>();
+
+        List<Hotel> htList = hotelDAO.getHotelByNameOrAlias( hotelName );
+
+        List<Contract> ctrList = new ArrayList<>();
+
+        for( Hotel h : htList )
+        {
+            List<Contract> ctr = contractDAO.getContractByHotelID( h.getHotelID() );
+            ctrList.addAll( ctr );
+        }
+
+        for( Contract ctr : ctrList )
+        {
+
+            ContractListResponse r = new ContractListResponse();
+
+            r.setContractID( ctr.getContractID() );
+            r.setHotelName( hotelDAO.getHotelByID( ctr.getHotelID() ).getHotelName() );
             response.add( r );
         }
 

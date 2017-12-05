@@ -2,6 +2,7 @@ package com.codegen.suntravels.controllers.entityControllers;
 
 import com.codegen.suntravels.entityRequests.AddContractDetailsRequest;
 import com.codegen.suntravels.entityResponses.AddEntityResponse;
+import com.codegen.suntravels.entityResponses.ContractDetailsListByHtNameResponse;
 import com.codegen.suntravels.entityResponses.ContractDetailsListResponse;
 import com.codegen.suntravels.services.entityServices.ContractDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,23 +19,38 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("contractDetails")
-public class ContractDetailsController {
+public class ContractDetailsController
+{
 
     @Autowired
     private ContractDetailsService contractDetailsService;
 
     @RequestMapping(method = RequestMethod.GET, path = "/list")
-    public List<ContractDetailsListResponse> getContractDetailsList(){
+    public List<ContractDetailsListResponse> getContractDetailsList()
+    {
         return contractDetailsService.getContractDetailsList();
     }
 
     @RequestMapping(method = RequestMethod.GET, path = "/list/{contractID}")
-    public List<ContractDetailsListResponse> getCtrDetailsByCtrID(@PathVariable("contractID") Integer contractID){
-        return contractDetailsService.getCtrDetailsByCtrID(contractID);
+    public List<ContractDetailsListResponse> getCtrDetailsByCtrID( @PathVariable("contractID") Integer contractID )
+    {
+        return contractDetailsService.getCtrDetailsByCtrID( contractID );
+    }
+
+    @RequestMapping(method = RequestMethod.GET, path = "/listByRoomType/{roomType}")
+    public List<ContractDetailsListResponse> getContractDetailsByRoomType( @PathVariable("roomType") String roomType )
+    {
+        return contractDetailsService.getContractDetailsByRoomTypeNameOrAlias( roomType );
+    }
+
+    @RequestMapping(method = RequestMethod.GET, path = "/listByHotelName/{hotelName}")
+    public List<ContractDetailsListByHtNameResponse> getContractDetailsByHotelName( @PathVariable("hotelName") String hotelName){
+        return contractDetailsService.getContractDetailsByHotelName( hotelName );
     }
 
     @RequestMapping(method = RequestMethod.POST, path = "/add")
-    public AddEntityResponse addContractDetails( @RequestBody AddContractDetailsRequest request){
-        return contractDetailsService.addContractDetails(request);
+    public AddEntityResponse addContractDetails( @RequestBody AddContractDetailsRequest request )
+    {
+        return contractDetailsService.addContractDetails( request );
     }
 }

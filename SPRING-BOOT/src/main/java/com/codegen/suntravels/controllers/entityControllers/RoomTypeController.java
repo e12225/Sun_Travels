@@ -3,12 +3,12 @@ package com.codegen.suntravels.controllers.entityControllers;
 import com.codegen.suntravels.entities.RoomType;
 import com.codegen.suntravels.services.entityServices.RoomTypeService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.websocket.server.PathParam;
 import java.util.List;
 
 @RestController
@@ -24,13 +24,17 @@ public class RoomTypeController {
     }
 
     @RequestMapping(method = RequestMethod.GET, path = "/list/{roomTypeID}")
-    public RoomType getRoomTypeByID(@PathParam("roomTypeID") Integer roomTypeID){
+    public RoomType getRoomTypeByID( @PathVariable("roomTypeID") Integer roomTypeID){
         return roomTypeService.getRoomTypeByID(roomTypeID);
+    }
+
+    @RequestMapping(method = RequestMethod.GET, path = "/listByName/{roomTypeName}")
+    public List<RoomType> getRoomTypeByNameOrAlias(@PathVariable("roomTypeName") String roomTypeName){
+        return roomTypeService.getRoomTypeByNameOrAlias( roomTypeName );
     }
 
     @RequestMapping(method = RequestMethod.POST, path = "/add")
     public void addRoomType(@RequestBody RoomType roomType){
         roomTypeService.addRoomType(roomType);
     }
-
 }
