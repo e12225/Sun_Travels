@@ -37,16 +37,19 @@ public class SearchRequestService
 
         for( Contract contract : contracts )
         {
-
             List<ContractDetails> contractDetailsList = contractDetailsDAO.getCtrDetailsByCtrID( contract.getContractID() );
-            List<ContractDetails> validContractDetailsList = searchRequestDAO.getValidContractDetailsList( contractDetailsList, request );
 
-            if( validContractDetailsList != null )
-            {
-                /**
-                 * i.e the contract and its contract details list(by default) are valid
-                 */
-                availableReservations.addAll( searchRequestDAO.getRoomTypesWithEnoughRooms( validContractDetailsList, request, contract ) );
+            if(contractDetailsList.size() != 0){
+
+                List<ContractDetails> validContractDetailsList = searchRequestDAO.getValidContractDetailsList( contractDetailsList, request );
+
+                if( validContractDetailsList != null )
+                {
+                    /**
+                     * i.e the contract and its contract details list(by default) are valid
+                     */
+                    availableReservations.addAll( searchRequestDAO.getRoomTypesWithEnoughRooms( validContractDetailsList, request, contract ) );
+                }
             }
         }
 

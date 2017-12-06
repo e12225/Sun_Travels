@@ -21,7 +21,7 @@ public class ContractDetailsDAO {
     }
 
     public List<ContractDetails> getCtrDetailsByCtrID(Integer contractID){
-        return contractDetailsRepository.getCtrDetailsList(contractID);
+        return contractDetailsRepository.getCtrDetailsListByCtrID(contractID);
     }
 
     public List<ContractDetails> getCtrDetailsByRoomTypeID(Integer roomTypeID){

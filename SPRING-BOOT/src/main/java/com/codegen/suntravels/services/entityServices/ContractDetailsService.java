@@ -220,7 +220,7 @@ public class ContractDetailsService
 
                 response.setInsertingStatus( true );
                 response.setEntity( contractDetails );
-                response.setMessage( "A new contract detail entry successfully added to the system" );
+                response.setMessage( "A new contract details entry successfully added to the system" );
             }
         }
         return response;
