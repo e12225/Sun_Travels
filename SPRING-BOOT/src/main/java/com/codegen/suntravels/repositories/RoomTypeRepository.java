@@ -20,12 +20,12 @@ public interface RoomTypeRepository extends JpaRepository<RoomType, Long> {
     /**
      * Retrieving the room type filtered by roomTypeName
      */
-    @Query("SELECT r FROM RoomType r WHERE r.roomTypeName = :rtName")
+    @Query("SELECT r FROM RoomType r WHERE upper(r.roomTypeName) = :rtName OR lower(r.roomTypeName) = :rtName")
     RoomType getRoomTypeByName(@Param("rtName") String roomTypeName);
 
     /**
      * Retrieving the room types filtered by partial or full roomTypeName
      */
-    @Query("SELECT r FROM RoomType r WHERE r.roomTypeName LIKE CONCAT('%',:rtName,'%')")
+    @Query("SELECT r FROM RoomType r WHERE upper(r.roomTypeName) LIKE CONCAT('%',upper(:rtName),'%') OR lower(r.roomTypeName) LIKE CONCAT('%',lower(:rtName),'%')")
     List<RoomType> getRoomTypeByNameOrAlias( @Param("rtName") String roomTypeName);
 }

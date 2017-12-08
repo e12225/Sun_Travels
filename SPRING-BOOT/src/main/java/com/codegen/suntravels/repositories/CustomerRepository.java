@@ -10,6 +10,6 @@ public interface CustomerRepository extends JpaRepository<Customer, Long> {
     /**
      * Retrieving the customers filtered by customerName
      */
-    @Query("SELECT c FROM Customer c WHERE c.customerName LIKE CONCAT('%',:cName,'%')")
+    @Query("SELECT c FROM Customer c WHERE upper(c.customerName) LIKE CONCAT('%',upper(:cName),'%') OR lower(c.customerName) LIKE CONCAT('%',lower(:cName),'%')")
     Customer getCustomerByName(@Param("cName") String customerName);
 }

@@ -1,6 +1,7 @@
 package com.codegen.suntravels.controllers.entityControllers;
 
 import com.codegen.suntravels.entities.RoomType;
+import com.codegen.suntravels.entityResponses.AddEntityResponse;
 import com.codegen.suntravels.services.entityServices.RoomTypeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -34,7 +35,7 @@ public class RoomTypeController {
     }
 
     @RequestMapping(method = RequestMethod.POST, path = "/add")
-    public void addRoomType(@RequestBody RoomType roomType){
-        roomTypeService.addRoomType(roomType);
+    public AddEntityResponse addRoomType( @RequestBody RoomType roomType){
+        return roomTypeService.addRoomType(roomType);
     }
 }

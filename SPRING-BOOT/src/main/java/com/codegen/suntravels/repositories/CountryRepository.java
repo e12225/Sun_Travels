@@ -23,12 +23,12 @@ public interface CountryRepository extends JpaRepository<Country, Long>{
     /**
      * Retrieving the country filtered by countryName
      */
-    @Query("SELECT co FROM Country co WHERE co.countryName = :coName")
+    @Query("SELECT co FROM Country co WHERE upper(co.countryName) = :coName OR lower(co.countryName) = :coName")
     Country getCountryByName(@Param("coName") String countryName);
 
     /**
      * Retrieving the countries filtered by partial or full countryName
      */
-    @Query("SELECT co FROM Country co WHERE co.countryName LIKE CONCAT('%',:coName,'%')")
+    @Query("SELECT co FROM Country co WHERE upper(co.countryName) LIKE CONCAT('%',upper(:coName),'%') OR lower(co.countryName) LIKE CONCAT('%',lower(:coName),'%')")
     List<Country> getCountryByNameOrAlias(@Param("coName") String countryName);
 }

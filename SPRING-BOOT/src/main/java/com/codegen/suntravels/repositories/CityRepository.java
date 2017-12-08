@@ -23,12 +23,12 @@ public interface CityRepository extends JpaRepository<City, Long> {
     /**
      * Retrieving the city filtered by cityName
      */
-    @Query("SELECT c FROM City c WHERE c.cityName = :cName")
+    @Query("SELECT c FROM City c WHERE upper(c.cityName) = :cName OR lower(c.cityName) = :cName")
     City getCityByName(@Param("cName") String cityName);
 
     /**
      * Retrieving the cities filtered by partial or full cityName
      */
-    @Query("SELECT c FROM City c WHERE c.cityName LIKE CONCAT('%',:cName,'%')")
+    @Query("SELECT c FROM City c WHERE upper(c.cityName) LIKE CONCAT('%',upper(:cName),'%') OR lower(c.cityName) LIKE CONCAT('%',lower(:cName),'%')")
     List<City> getCityByNameOrAlias(@Param("cName") String cityName);
 }
