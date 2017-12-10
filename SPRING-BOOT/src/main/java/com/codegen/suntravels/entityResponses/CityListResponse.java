@@ -1,12 +1,21 @@
-package com.codegen.suntravels.entityRequests;
+package com.codegen.suntravels.entityResponses;
 
 /**
  * Created by DELL on 12/9/2017.
  */
-public class AddCityRequest {
+public class CityListResponse {
 
+    private Integer cityID;
     private String countryName;
     private String cityName;
+
+    public Integer getCityID() {
+        return cityID;
+    }
+
+    public void setCityID(Integer cityID) {
+        this.cityID = cityID;
+    }
 
     public String getCountryName() {
         return countryName;
@@ -26,8 +35,9 @@ public class AddCityRequest {
 
     @Override
     public String toString() {
-        return "AddCityRequest{" +
-                "countryName='" + countryName + '\'' +
+        return "CityListResponse{" +
+                "cityID=" + cityID +
+                ", countryName='" + countryName + '\'' +
                 ", cityName='" + cityName + '\'' +
                 '}';
     }

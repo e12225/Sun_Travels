@@ -1,6 +1,7 @@
 package com.codegen.suntravels.controllers.entityControllers;
 
 import com.codegen.suntravels.entities.Country;
+import com.codegen.suntravels.entityResponses.AddEntityResponse;
 import com.codegen.suntravels.services.entityServices.CountryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -28,7 +29,7 @@ public class CountryController {
     }
 
     @RequestMapping(method = RequestMethod.POST, path = "/add")
-    public void addCountry(@RequestBody Country country){
-        countryService.addCountry(country);
+    public AddEntityResponse addCountry(@RequestBody Country country){
+        return countryService.addCountry(country);
     }
 }

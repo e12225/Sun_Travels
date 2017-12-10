@@ -11,8 +11,11 @@ public class Customer {
     @Column(name = "CUST_ID")
     private Integer customerID;
 
-    @Column(name = "CUST_NAME")
-    private String customerName;
+    @Column(name = "CUST_FIRST_NAME")
+    private String customerFirstName;
+
+    @Column(name = "CUST_LAST_NAME")
+    private String customerLastName;
 
     @Column(name = "CUST_PHONE_NO")
     private Long customerPhoneNumber;
@@ -23,6 +26,9 @@ public class Customer {
     @Column(name = "CUST_CITY_ID")
     private Integer cityID;
 
+    @Column(name = "CUST_SSN_OR_NIC")
+    private String ssnOrNic;
+
     public Integer getCustomerID() {
         return customerID;
     }
@@ -31,12 +37,20 @@ public class Customer {
         this.customerID = customerID;
     }
 
-    public String getCustomerName() {
-        return customerName;
+    public String getCustomerFirstName() {
+        return customerFirstName;
     }
 
-    public void setCustomerName(String customerName) {
-        this.customerName = customerName;
+    public void setCustomerFirstName(String customerFirstName) {
+        this.customerFirstName = customerFirstName;
+    }
+
+    public String getCustomerLastName() {
+        return customerLastName;
+    }
+
+    public void setCustomerLastName(String customerLastName) {
+        this.customerLastName = customerLastName;
     }
 
     public Long getCustomerPhoneNumber() {
@@ -63,15 +77,12 @@ public class Customer {
         this.cityID = cityID;
     }
 
-    @Override
-    public String toString() {
-        return "Customer{" +
-                "customerID=" + customerID +
-                ", customerName='" + customerName + '\'' +
-                ", customerPhoneNumber=" + customerPhoneNumber +
-                ", countryID=" + countryID +
-                ", cityID=" + cityID +
-                '}';
+    public String getSsnOrNic() {
+        return ssnOrNic;
+    }
+
+    public void setSsnOrNic(String ssnOrNic) {
+        this.ssnOrNic = ssnOrNic;
     }
 
     @Override
@@ -82,20 +93,24 @@ public class Customer {
         Customer customer = (Customer) o;
 
         if (!customerID.equals(customer.customerID)) return false;
-        if (!customerName.equals(customer.customerName)) return false;
+        if (!customerFirstName.equals(customer.customerFirstName)) return false;
+        if (!customerLastName.equals(customer.customerLastName)) return false;
         if (!customerPhoneNumber.equals(customer.customerPhoneNumber)) return false;
         if (!countryID.equals(customer.countryID)) return false;
-        return cityID.equals(customer.cityID);
+        if (!cityID.equals(customer.cityID)) return false;
+        return ssnOrNic.equals(customer.ssnOrNic);
 
     }
 
     @Override
     public int hashCode() {
         int result = customerID.hashCode();
-        result = 31 * result + customerName.hashCode();
+        result = 31 * result + customerFirstName.hashCode();
+        result = 31 * result + customerLastName.hashCode();
         result = 31 * result + customerPhoneNumber.hashCode();
         result = 31 * result + countryID.hashCode();
         result = 31 * result + cityID.hashCode();
+        result = 31 * result + ssnOrNic.hashCode();
         return result;
     }
 }

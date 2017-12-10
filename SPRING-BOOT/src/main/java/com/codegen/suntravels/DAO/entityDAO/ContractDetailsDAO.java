@@ -28,6 +28,10 @@ public class ContractDetailsDAO {
         return contractDetailsRepository.getCtrDetailsByRoomTypeID( roomTypeID );
     }
 
+    public ContractDetails getCtrDetailsByRoomTypeIDandCtrID(Integer roomTypeID, Integer contractID){
+        return contractDetailsRepository.getCtrDetailsByRoomTypeIDandCtrID(roomTypeID, contractID);
+    }
+
     public void addContractDetails(ContractDetails contractDetails){
         contractDetailsRepository.save(contractDetails);
     }

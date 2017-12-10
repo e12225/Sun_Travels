@@ -20,7 +20,7 @@ public interface RoomTypeRepository extends JpaRepository<RoomType, Long> {
     /**
      * Retrieving the room type filtered by roomTypeName
      */
-    @Query("SELECT r FROM RoomType r WHERE upper(r.roomTypeName) = :rtName OR lower(r.roomTypeName) = :rtName")
+    @Query("SELECT r FROM RoomType r WHERE upper(r.roomTypeName) = upper(:rtName) OR lower(r.roomTypeName) = lower(:rtName)")
     RoomType getRoomTypeByName(@Param("rtName") String roomTypeName);
 
     /**

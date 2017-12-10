@@ -23,7 +23,7 @@ public interface CountryRepository extends JpaRepository<Country, Long>{
     /**
      * Retrieving the country filtered by countryName
      */
-    @Query("SELECT co FROM Country co WHERE upper(co.countryName) = :coName OR lower(co.countryName) = :coName")
+    @Query("SELECT co FROM Country co WHERE upper(co.countryName) = upper(:coName) OR lower(co.countryName) = lower(:coName)")
     Country getCountryByName(@Param("coName") String countryName);
 
     /**

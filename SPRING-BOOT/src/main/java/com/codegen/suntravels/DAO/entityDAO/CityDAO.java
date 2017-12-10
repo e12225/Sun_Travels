@@ -24,15 +24,15 @@ public class CityDAO {
         return cityRepository.getCityByID(cityID);
     }
 
-    public City getCityByName(String cityName){
-        return cityRepository.getCityByName(cityName);
-    }
-
     public List<City> getCityByNameOrAlias(String cityName){
         return cityRepository.getCityByNameOrAlias(cityName);
     }
 
     public void addCity(City city){
         cityRepository.save(city);
+    }
+
+    public City getCityBelongstoGivenCountry(Integer countryID, String cityName ){
+        return cityRepository.getCityBelongstoGivenCountry(countryID, cityName);
     }
 }

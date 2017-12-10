@@ -40,7 +40,7 @@ public class RoomTypeService
         if( rt != null )
         {
             /**
-             * a room type under the given name exists already
+             * a room type under the given name already exists
              */
             response.setInsertingStatus( false );
             response.setEntity( null );

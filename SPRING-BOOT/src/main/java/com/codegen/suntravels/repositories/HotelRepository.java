@@ -18,14 +18,26 @@ public interface HotelRepository extends JpaRepository<Hotel, Long> {
     Hotel getHotelByID(@Param("htID") Integer hotelID);
 
     /**
-     * Retrieving the hotel filtered by hotelName
+     * Retrieving the hotel filtered by hotelName and its' phone number
      */
-    @Query("SELECT h FROM Hotel h WHERE upper(h.hotelName) = :htName OR lower(h.hotelName) = :htName")
-    Hotel getHotelByName(@Param("htName") String hotelName);
+    @Query("SELECT h FROM Hotel h WHERE upper(h.hotelName) = upper(:htName) AND h.hotelPhoneNumber = :htPhoneNumber OR lower(h.hotelName) = lower(:htName) AND h.hotelPhoneNumber = :htPhoneNumber")
+    Hotel getHotelByNameandPhoneNumber(@Param("htName") String hotelName, @Param("htPhoneNumber") Long phoneNumber);
 
     /**
      * Retrieving the hotels filtered by partial or full hotelName
      */
     @Query("SELECT h FROM Hotel h WHERE upper(h.hotelName) LIKE CONCAT('%',upper(:htName),'%') OR lower(h.hotelName) LIKE CONCAT('%',lower(:htName),'%')")
     List<Hotel> getHotelByNameOrAlias(@Param("htName") String hotelName);
+
+    /**
+     * Retrieving the hotels filtered by hotel phone number
+     */
+    @Query("SELECT h FROM Hotel h WHERE h.hotelPhoneNumber = :htPhoneNumber")
+    Hotel getHotelByPhoneNumber(@Param("htPhoneNumber") Long hotelPhoneNumber);
+
+    /**
+     * Retrieving the hotel filtered by hotelName, its' cityID and its' countryID
+     */
+    @Query("SELECT h FROM Hotel h WHERE (upper(h.hotelName) = upper(:htName) AND h.cityID = :htCityID AND h.countryID = :htCountryID) OR (lower(h.hotelName) = lower(:htName) AND h.cityID = :htCityID AND h.countryID = :htCountryID)")
+    Hotel getHotelByNameCityCountry(@Param("htName") String hotelName, @Param("htCityID") Integer cityID, @Param("htCountryID") Integer countryID);
 }

@@ -1,16 +1,25 @@
-package com.codegen.suntravels.entityRequests;
+package com.codegen.suntravels.entityResponses;
 
 /**
- * Created by DELL on 12/2/2017.
+ * Created by DELL on 12/10/2017.
  */
-public class AddCustomerRequest {
+public class CustomerListResponse {
 
+    private Integer customerID;
     private String customerFirstName;
     private String customerLastName;
     private Long customerPhoneNumber;
     private String countryName;
     private String cityName;
     private String ssnOrNic;
+
+    public Integer getCustomerID() {
+        return customerID;
+    }
+
+    public void setCustomerID(Integer customerID) {
+        this.customerID = customerID;
+    }
 
     public String getCustomerFirstName() {
         return customerFirstName;
@@ -62,8 +71,9 @@ public class AddCustomerRequest {
 
     @Override
     public String toString() {
-        return "AddCustomerRequest{" +
-                "customerFirstName='" + customerFirstName + '\'' +
+        return "CustomerListResponse{" +
+                "customerID=" + customerID +
+                ", customerFirstName='" + customerFirstName + '\'' +
                 ", customerLastName='" + customerLastName + '\'' +
                 ", customerPhoneNumber=" + customerPhoneNumber +
                 ", countryName='" + countryName + '\'' +

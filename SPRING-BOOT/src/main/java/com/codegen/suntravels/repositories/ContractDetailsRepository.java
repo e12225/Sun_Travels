@@ -25,4 +25,10 @@ public interface ContractDetailsRepository extends JpaRepository<ContractDetails
      */
     @Query("SELECT c FROM ContractDetails c WHERE c.roomTypeID = :rtID")
     List<ContractDetails> getCtrDetailsByRoomTypeID(@Param("rtID") Integer roomTypeID);
+
+    /**
+     * Retrieving the contract details filtered by contractID and roomTypeID
+     */
+    @Query("SELECT c FROM ContractDetails c WHERE c.roomTypeID = :rtID AND c.contractID = :ctrID")
+    ContractDetails getCtrDetailsByRoomTypeIDandCtrID(@Param("rtID") Integer roomTypeID, @Param("ctrID") Integer contractID);
 }

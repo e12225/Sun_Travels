@@ -171,43 +171,27 @@ public class ContractDetailsService
         {
             response.setInsertingStatus( false );
             response.setEntity( null );
-            response.setMessage( "A contract with ID " + request.getContractID() + " doesn't exist in the system" );
+            response.setMessage( "A contract with ID : " + request.getContractID() + " doesn't exist in the system" );
         }
         else if( rt == null )
         {
             response.setInsertingStatus( false );
             response.setEntity( null );
-            response.setMessage( "A room type named " + request.getRoomType() + " doesn't exist in the system" );
+            response.setMessage( "A room type named : " + request.getRoomType() + " doesn't exist in the system" );
         }
         else
         {
-            /**
-             * Currently existing contract details list
-             */
-            List<ContractDetails> list = contractDetailsDAO.getContractDetailsList();
+            ContractDetails ctrDetails = contractDetailsDAO.getCtrDetailsByRoomTypeIDandCtrID(rt.getRoomTypeID(), ct.getContractID());
 
-            ContractDetails contractDetails = new ContractDetails();
-
-            Integer nextCheckPoint = 0;
-            for( ContractDetails cd : list )
-            {
-
-                if( cd.getContractID().equals( ct.getContractID() ) && cd.getRoomTypeID().equals( rt.getRoomTypeID() ) )
-                {
-                    // same room type cannot be added more than once under the same contract
-                    response.setInsertingStatus( false );
-                    response.setEntity( null );
-                    response.setMessage( "A contract detail entry is already exists for the " + rt.getRoomTypeName() + " under the contract ID " + ct.getContractID() );
-                    break;
-                }
-                else
-                {
-                    nextCheckPoint++;
-                }
+            if(ctrDetails != null){
+                response.setInsertingStatus( false );
+                response.setEntity( null );
+                response.setMessage( "A contract detail entry already exists for the room type : " + rt.getRoomTypeName() + " under the contract ID : " + ct.getContractID() );
             }
+            else {
 
-            if( nextCheckPoint == list.size() )
-            {
+                ContractDetails contractDetails = new ContractDetails();
+
                 contractDetails.setContractID( ct.getContractID() );
                 contractDetails.setValidFrom( request.getValidFrom() );
                 contractDetails.setValidTo( request.getValidTo() );

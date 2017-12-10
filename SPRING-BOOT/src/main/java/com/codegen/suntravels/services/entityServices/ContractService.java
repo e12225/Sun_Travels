@@ -17,8 +17,7 @@ import java.util.List;
  * Created by DELL on 11/15/2017.
  */
 @Service
-public class ContractService
-{
+public class ContractService {
 
     @Autowired
     private ContractDAO contractDAO;
@@ -26,8 +25,7 @@ public class ContractService
     @Autowired
     private HotelDAO hotelDAO;
 
-    public List<ContractListResponse> getContractList()
-    {
+    public List<ContractListResponse> getContractList() {
         /**
          * Currently existing contract list
          */
@@ -35,101 +33,89 @@ public class ContractService
 
         List<ContractListResponse> response = new ArrayList<>();
 
-        for( Contract c : list )
-        {
+        for (Contract c : list) {
             ContractListResponse r = new ContractListResponse();
 
-            r.setContractID( c.getContractID() );
-            r.setHotelName( hotelDAO.getHotelByID( c.getHotelID() ).getHotelName() );
-            response.add( r );
+            r.setContractID(c.getContractID());
+            r.setHotelName(hotelDAO.getHotelByID(c.getHotelID()).getHotelName());
+            response.add(r);
         }
 
         return response;
     }
 
-    public ContractListResponse getContractByID( Integer contractID )
-    {
+    public ContractListResponse getContractByID(Integer contractID) {
         ContractListResponse response = new ContractListResponse();
 
-        Contract contract = contractDAO.getContractByID( contractID );
+        Contract contract = contractDAO.getContractByID(contractID);
 
-        response.setContractID( contract.getContractID() );
-        response.setHotelName( hotelDAO.getHotelByID( contract.getHotelID() ).getHotelName() );
+        response.setContractID(contract.getContractID());
+        response.setHotelName(hotelDAO.getHotelByID(contract.getHotelID()).getHotelName());
 
         return response;
     }
 
-    public List<ContractListResponse> getContractByHotelID( Integer hotelID )
-    {
+    public List<ContractListResponse> getContractByHotelID(Integer hotelID) {
 
         List<ContractListResponse> response = new ArrayList<>();
 
-        List<Contract> list = contractDAO.getContractByHotelID( hotelID );
+        List<Contract> list = contractDAO.getContractByHotelID(hotelID);
 
-        for( Contract c : list )
-        {
+        for (Contract c : list) {
             ContractListResponse r = new ContractListResponse();
 
-            r.setContractID( c.getContractID() );
-            r.setHotelName( hotelDAO.getHotelByID( hotelID ).getHotelName() );
-            response.add( r );
+            r.setContractID(c.getContractID());
+            r.setHotelName(hotelDAO.getHotelByID(hotelID).getHotelName());
+            response.add(r);
         }
 
         return response;
     }
 
-    public List<ContractListResponse> getContractByHotelName( String hotelName )
-    {
+    public List<ContractListResponse> getContractByHotelName(String hotelName) {
 
         List<ContractListResponse> response = new ArrayList<>();
 
-        List<Hotel> htList = hotelDAO.getHotelByNameOrAlias( hotelName );
+        List<Hotel> htList = hotelDAO.getHotelByNameOrAlias(hotelName);
 
         List<Contract> ctrList = new ArrayList<>();
 
-        for( Hotel h : htList )
-        {
-            List<Contract> ctr = contractDAO.getContractByHotelID( h.getHotelID() );
-            ctrList.addAll( ctr );
+        for (Hotel h : htList) {
+            List<Contract> ctr = contractDAO.getContractByHotelID(h.getHotelID());
+            ctrList.addAll(ctr);
         }
 
-        for( Contract ctr : ctrList )
-        {
+        for (Contract ctr : ctrList) {
 
             ContractListResponse r = new ContractListResponse();
 
-            r.setContractID( ctr.getContractID() );
-            r.setHotelName( hotelDAO.getHotelByID( ctr.getHotelID() ).getHotelName() );
-            response.add( r );
+            r.setContractID(ctr.getContractID());
+            r.setHotelName(hotelDAO.getHotelByID(ctr.getHotelID()).getHotelName());
+            response.add(r);
         }
 
         return response;
     }
 
-    public AddEntityResponse addContract( AddContractRequest request )
-    {
+    public AddEntityResponse addContract(AddContractRequest request) {
 
         AddEntityResponse response = new AddEntityResponse();
 
-        Hotel ht = hotelDAO.getHotelByName( request.getHotelName() );
-
-        if( ht == null )
-        {
-            response.setInsertingStatus( false );
-            response.setEntity( null );
-            response.setMessage( "A hotel named " + request.getHotelName() + " doesn't exist in the system" );
+        Hotel ht = hotelDAO.getHotelByNameandPhoneNumber(request.getHotelName(), request.getHotelPhoneNumber());
+        if(ht == null){
+            response.setInsertingStatus(false);
+            response.setEntity(null);
+            response.setMessage("A hotel named " + request.getHotelName() + " with phone number " + request.getHotelPhoneNumber() + " doesn't exist in the system");
         }
-
-        else
-        {
+        else {
             Contract contract = new Contract();
-            contract.setHotelID( ht.getHotelID() );
+            contract.setHotelID(ht.getHotelID());
 
-            contractDAO.addContract( contract );
+            contractDAO.addContract(contract);
 
-            response.setInsertingStatus( true );
-            response.setEntity( contract );
-            response.setMessage( "A new contract under " + ht.getHotelName() + " is successfully added to the system" );
+            response.setInsertingStatus(true);
+            response.setEntity(contract);
+            response.setMessage("A new contract under the hotel " + ht.getHotelName() + " is successfully added to the system");
         }
 
         return response;

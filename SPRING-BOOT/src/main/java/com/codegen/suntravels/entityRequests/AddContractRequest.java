@@ -3,6 +3,7 @@ package com.codegen.suntravels.entityRequests;
 public class AddContractRequest {
 
     private String hotelName;
+    private Long hotelPhoneNumber;
 
     public String getHotelName()
     {
@@ -14,10 +15,19 @@ public class AddContractRequest {
         this.hotelName = hotelName;
     }
 
-    @Override public String toString()
-    {
+    public Long getHotelPhoneNumber() {
+        return hotelPhoneNumber;
+    }
+
+    public void setHotelPhoneNumber(Long hotelPhoneNumber) {
+        this.hotelPhoneNumber = hotelPhoneNumber;
+    }
+
+    @Override
+    public String toString() {
         return "AddContractRequest{" +
                 "hotelName='" + hotelName + '\'' +
+                ", hotelPhoneNumber=" + hotelPhoneNumber +
                 '}';
     }
 }

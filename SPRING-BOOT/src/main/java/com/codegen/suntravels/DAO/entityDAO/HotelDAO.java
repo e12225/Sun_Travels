@@ -8,34 +8,36 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 
 @Component
-public class HotelDAO
-{
+public class HotelDAO {
 
     @Autowired
     private HotelRepository hotelRepository;
 
-    public List<Hotel> getHotelList()
-    {
+    public List<Hotel> getHotelList() {
         return hotelRepository.findAll();
     }
 
-    public void addHotel( Hotel hotel )
-    {
-        hotelRepository.save( hotel );
+    public void addHotel(Hotel hotel) {
+        hotelRepository.save(hotel);
     }
 
-    public Hotel getHotelByID( Integer hotelID )
-    {
-        return hotelRepository.getHotelByID( hotelID );
+    public Hotel getHotelByID(Integer hotelID) {
+        return hotelRepository.getHotelByID(hotelID);
     }
 
-    public Hotel getHotelByName( String hotelName )
-    {
-        return hotelRepository.getHotelByName( hotelName );
+    public Hotel getHotelByNameandPhoneNumber(String hotelName, Long phoneNumber) {
+        return hotelRepository.getHotelByNameandPhoneNumber(hotelName, phoneNumber);
     }
 
-    public List<Hotel> getHotelByNameOrAlias( String hotelName )
-    {
-        return hotelRepository.getHotelByNameOrAlias( hotelName );
+    public Hotel getHotelByNameCityCountry(String hotelName, Integer cityID, Integer countryID) {
+        return hotelRepository.getHotelByNameCityCountry(hotelName, cityID, countryID);
+    }
+
+    public List<Hotel> getHotelByNameOrAlias(String hotelName) {
+        return hotelRepository.getHotelByNameOrAlias(hotelName);
+    }
+
+    public Hotel getHotelByPhoneNumber(Long phoneNumber) {
+        return hotelRepository.getHotelByPhoneNumber(phoneNumber);
     }
 }

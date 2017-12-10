@@ -17,8 +17,12 @@ public class CustomerDAO {
         return customerRepository.findAll();
     }
 
-    public Customer getCustomerByName(String customerName){
-        return customerRepository.getCustomerByName(customerName);
+    public List<Customer> getCustomerByNameOrAlias(String customerName){
+        return customerRepository.getCustomerByNameOrAlias(customerName);
+    }
+
+    public Customer getCustomerByIdentity(String identity){
+        return customerRepository.getCustomerByIdentity(identity);
     }
 
     public void addCustomer(Customer customer){
