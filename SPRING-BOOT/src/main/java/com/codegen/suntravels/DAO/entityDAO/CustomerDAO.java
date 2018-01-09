@@ -8,24 +8,29 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 
 @Component
-public class CustomerDAO {
+public class CustomerDAO
+{
 
     @Autowired
     private CustomerRepository customerRepository;
 
-    public List<Customer> getCustomerList(){
+    public List<Customer> getCustomerList()
+    {
         return customerRepository.findAll();
     }
 
-    public List<Customer> getCustomerByNameOrAlias(String customerName){
-        return customerRepository.getCustomerByNameOrAlias(customerName);
+    public List<Customer> getCustomerByNameOrAlias( String customerName )
+    {
+        return customerRepository.getCustomerByNameOrAlias( customerName );
     }
 
-    public Customer getCustomerByIdentity(String identity){
-        return customerRepository.getCustomerByIdentity(identity);
+    public Customer getCustomerByIdentity( String identity )
+    {
+        return customerRepository.getCustomerByIdentity( identity );
     }
 
-    public void addCustomer(Customer customer){
-        customerRepository.save(customer);
+    public void addCustomer( Customer customer )
+    {
+        customerRepository.save( customer );
     }
 }

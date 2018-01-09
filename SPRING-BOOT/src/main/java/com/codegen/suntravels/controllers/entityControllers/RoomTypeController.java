@@ -14,28 +14,33 @@ import java.util.List;
 
 @RestController
 @RequestMapping(value = "roomTypes")
-public class RoomTypeController {
+public class RoomTypeController
+{
 
     @Autowired
     private RoomTypeService roomTypeService;
 
     @RequestMapping(method = RequestMethod.GET, path = "/list")
-    public List<RoomType> getRoomTypeList(){
+    public List<RoomType> getRoomTypeList()
+    {
         return roomTypeService.getRoomTypeList();
     }
 
     @RequestMapping(method = RequestMethod.GET, path = "/list/{roomTypeID}")
-    public RoomType getRoomTypeByID( @PathVariable("roomTypeID") Integer roomTypeID){
-        return roomTypeService.getRoomTypeByID(roomTypeID);
+    public RoomType getRoomTypeByID( @PathVariable("roomTypeID") Integer roomTypeID )
+    {
+        return roomTypeService.getRoomTypeByID( roomTypeID );
     }
 
     @RequestMapping(method = RequestMethod.GET, path = "/listByName/{roomTypeName}")
-    public List<RoomType> getRoomTypeByNameOrAlias(@PathVariable("roomTypeName") String roomTypeName){
+    public List<RoomType> getRoomTypeByNameOrAlias( @PathVariable("roomTypeName") String roomTypeName )
+    {
         return roomTypeService.getRoomTypeByNameOrAlias( roomTypeName );
     }
 
     @RequestMapping(method = RequestMethod.POST, path = "/add")
-    public AddEntityResponse addRoomType( @RequestBody RoomType roomType){
-        return roomTypeService.addRoomType(roomType);
+    public AddEntityResponse addRoomType( @RequestBody RoomType roomType )
+    {
+        return roomTypeService.addRoomType( roomType );
     }
 }

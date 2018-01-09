@@ -44,7 +44,8 @@ public class ContractDetailsController
     }
 
     @RequestMapping(method = RequestMethod.GET, path = "/listByHotelName/{hotelName}")
-    public List<ContractDetailsListByHtNameResponse> getContractDetailsByHotelName( @PathVariable("hotelName") String hotelName){
+    public List<ContractDetailsListByHtNameResponse> getContractDetailsByHotelName( @PathVariable("hotelName") String hotelName )
+    {
         return contractDetailsService.getContractDetailsByHotelName( hotelName );
     }
 

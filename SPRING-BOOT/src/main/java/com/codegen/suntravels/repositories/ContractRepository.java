@@ -12,18 +12,19 @@ import java.util.List;
  * Created by DELL on 11/15/2017.
  */
 @Repository
-public interface ContractRepository extends JpaRepository<Contract, Long> {
+public interface ContractRepository extends JpaRepository<Contract, Long>
+{
 
     /**
      * Retrieving the contracts filtered by contractID
      */
     @Query("SELECT ctr FROM Contract ctr WHERE ctr.contractID = :ctrID")
-    Contract getContractByID(@Param("ctrID") Integer contractID);
+    Contract getContractByID( @Param("ctrID") Integer contractID );
 
     /**
      * Retrieving the contracts filtered by hotelID
      */
     @Query("SELECT ctr FROM Contract ctr WHERE ctr.hotelID = :hID")
-    List<Contract> getContractByHotelID( @Param("hID") Integer hotelID);
+    List<Contract> getContractByHotelID( @Param("hID") Integer hotelID );
 
 }

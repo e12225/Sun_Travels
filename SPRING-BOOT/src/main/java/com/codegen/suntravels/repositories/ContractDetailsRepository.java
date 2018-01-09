@@ -12,23 +12,24 @@ import java.util.List;
  * Created by DELL on 11/15/2017.
  */
 @Repository
-public interface ContractDetailsRepository extends JpaRepository<ContractDetails, Long> {
+public interface ContractDetailsRepository extends JpaRepository<ContractDetails, Long>
+{
 
     /**
      * Retrieving the contract details filtered by contractID
      */
     @Query("SELECT c FROM ContractDetails c WHERE c.contractID = :ctrID")
-    List<ContractDetails> getCtrDetailsListByCtrID(@Param("ctrID") Integer contractID);
+    List<ContractDetails> getCtrDetailsListByCtrID( @Param("ctrID") Integer contractID );
 
     /**
      * Retrieving the contract details filtered by roomTypeID
      */
     @Query("SELECT c FROM ContractDetails c WHERE c.roomTypeID = :rtID")
-    List<ContractDetails> getCtrDetailsByRoomTypeID(@Param("rtID") Integer roomTypeID);
+    List<ContractDetails> getCtrDetailsByRoomTypeID( @Param("rtID") Integer roomTypeID );
 
     /**
      * Retrieving the contract details filtered by contractID and roomTypeID
      */
     @Query("SELECT c FROM ContractDetails c WHERE c.roomTypeID = :rtID AND c.contractID = :ctrID")
-    ContractDetails getCtrDetailsByRoomTypeIDandCtrID(@Param("rtID") Integer roomTypeID, @Param("ctrID") Integer contractID);
+    ContractDetails getCtrDetailsByRoomTypeIDandCtrID( @Param("rtID") Integer roomTypeID, @Param("ctrID") Integer contractID );
 }

@@ -2,7 +2,8 @@ package com.codegen.suntravels.entityResponses;
 
 import java.sql.Date;
 
-public class ContractDetailsListResponse {
+public class ContractDetailsListResponse
+{
 
     private Integer contractDetailsID;
     private Integer contractID;

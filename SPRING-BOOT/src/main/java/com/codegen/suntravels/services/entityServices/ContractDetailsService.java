@@ -90,16 +90,17 @@ public class ContractDetailsService
         return response;
     }
 
-    public List<ContractDetailsListResponse> getContractDetailsByRoomTypeNameOrAlias( String roomType)
+    public List<ContractDetailsListResponse> getContractDetailsByRoomTypeNameOrAlias( String roomType )
     {
 
         List<ContractDetailsListResponse> response = new ArrayList<>();
 
-        List<RoomType> rmTypeList = roomTypeDAO.getRoomTypeByNameOrAlias(roomType);
+        List<RoomType> rmTypeList = roomTypeDAO.getRoomTypeByNameOrAlias( roomType );
 
-        List<ContractDetails> ctrList = new ArrayList<>(  );
+        List<ContractDetails> ctrList = new ArrayList<>();
 
-        for(RoomType rt : rmTypeList){
+        for( RoomType rt : rmTypeList )
+        {
             List<ContractDetails> ctr = contractDetailsDAO.getCtrDetailsByRoomTypeID( rt.getRoomTypeID() );
             ctrList.addAll( ctr );
         }
@@ -122,21 +123,25 @@ public class ContractDetailsService
         return response;
     }
 
-    public List<ContractDetailsListByHtNameResponse> getContractDetailsByHotelName( String hotelName){
+    public List<ContractDetailsListByHtNameResponse> getContractDetailsByHotelName( String hotelName )
+    {
 
         List<ContractDetailsListByHtNameResponse> response = new ArrayList<>();
 
         List<Hotel> htList = hotelDAO.getHotelByNameOrAlias( hotelName );
 
-        for( Hotel h : htList ){
+        for( Hotel h : htList )
+        {
 
             List<Contract> cList = contractDAO.getContractByHotelID( h.getHotelID() );
 
-            for(Contract ct : cList){
+            for( Contract ct : cList )
+            {
 
                 List<ContractDetails> cdList = contractDetailsDAO.getCtrDetailsByCtrID( ct.getContractID() );
 
-                for( ContractDetails cd : cdList ){
+                for( ContractDetails cd : cdList )
+                {
 
                     ContractDetailsListResponse cdr = new ContractDetailsListResponse();
 
@@ -152,7 +157,7 @@ public class ContractDetailsService
                     ContractDetailsListByHtNameResponse r = new ContractDetailsListByHtNameResponse();
                     r.setContractDetailsListResponse( cdr );
                     r.setHotelName( h.getHotelName() );
-                    response.add(r);
+                    response.add( r );
                 }
             }
         }
@@ -181,14 +186,16 @@ public class ContractDetailsService
         }
         else
         {
-            ContractDetails ctrDetails = contractDetailsDAO.getCtrDetailsByRoomTypeIDandCtrID(rt.getRoomTypeID(), ct.getContractID());
+            ContractDetails ctrDetails = contractDetailsDAO.getCtrDetailsByRoomTypeIDandCtrID( rt.getRoomTypeID(), ct.getContractID() );
 
-            if(ctrDetails != null){
+            if( ctrDetails != null )
+            {
                 response.setInsertingStatus( false );
                 response.setEntity( null );
                 response.setMessage( "A contract detail entry already exists for the room type : " + rt.getRoomTypeName() + " under the contract ID : " + ct.getContractID() );
             }
-            else {
+            else
+            {
 
                 ContractDetails contractDetails = new ContractDetails();
 

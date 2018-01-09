@@ -16,15 +16,17 @@ import java.util.List;
  */
 @RestController
 @RequestMapping(value = "reservations")
-public class SearchRequestController {
+public class SearchRequestController
+{
 
     @Autowired
     private SearchRequestService searchRequestService;
 
     @RequestMapping(method = RequestMethod.POST, path = "/search")
-    public List<AvailableReservationComposer> getAvailableReservations(@RequestBody SearchReservationRequest request){
+    public List<AvailableReservationComposer> getAvailableReservations( @RequestBody SearchReservationRequest request )
+    {
 
-        List<AvailableReservationComposer> reservationsList = searchRequestService.processSearchRequest(request);
+        List<AvailableReservationComposer> reservationsList = searchRequestService.processSearchRequest( request );
         return reservationsList;
     }
 }

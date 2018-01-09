@@ -3,7 +3,8 @@ package com.codegen.suntravels.entityRequests;
 /**
  * Created by DELL on 12/2/2017.
  */
-public class AddCustomerRequest {
+public class AddCustomerRequest
+{
 
     private String customerFirstName;
     private String customerLastName;
@@ -12,56 +13,69 @@ public class AddCustomerRequest {
     private String cityName;
     private String ssnOrNic;
 
-    public String getCustomerFirstName() {
+    public String getCustomerFirstName()
+    {
         return customerFirstName;
     }
 
-    public void setCustomerFirstName(String customerFirstName) {
+    public void setCustomerFirstName( String customerFirstName )
+    {
         this.customerFirstName = customerFirstName;
     }
 
-    public String getCustomerLastName() {
+    public String getCustomerLastName()
+    {
         return customerLastName;
     }
 
-    public void setCustomerLastName(String customerLastName) {
+    public void setCustomerLastName( String customerLastName )
+    {
         this.customerLastName = customerLastName;
     }
 
-    public Long getCustomerPhoneNumber() {
+    public Long getCustomerPhoneNumber()
+    {
         return customerPhoneNumber;
     }
 
-    public void setCustomerPhoneNumber(Long customerPhoneNumber) {
+    public void setCustomerPhoneNumber( Long customerPhoneNumber )
+    {
         this.customerPhoneNumber = customerPhoneNumber;
     }
 
-    public String getCountryName() {
+    public String getCountryName()
+    {
         return countryName;
     }
 
-    public void setCountryName(String countryName) {
+    public void setCountryName( String countryName )
+    {
         this.countryName = countryName;
     }
 
-    public String getCityName() {
+    public String getCityName()
+    {
         return cityName;
     }
 
-    public void setCityName(String cityName) {
+    public void setCityName( String cityName )
+    {
         this.cityName = cityName;
     }
 
-    public String getSsnOrNic() {
+    public String getSsnOrNic()
+    {
         return ssnOrNic;
     }
 
-    public void setSsnOrNic(String ssnOrNic) {
+    public void setSsnOrNic( String ssnOrNic )
+    {
         this.ssnOrNic = ssnOrNic;
     }
 
     @Override
-    public String toString() {
+    public String toString()
+    {
         return "AddCustomerRequest{" +
                 "customerFirstName='" + customerFirstName + '\'' +
                 ", customerLastName='" + customerLastName + '\'' +

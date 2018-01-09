@@ -6,7 +6,8 @@ import org.springframework.stereotype.Component;
  * Created by DELL on 11/19/2017.
  */
 @Component
-public class MarkupCalculator {
+public class MarkupCalculator
+{
 
     //TODO : change the formula if needed
 
@@ -14,10 +15,11 @@ public class MarkupCalculator {
     private Double cost = 0.00;
     private Double markedUpPrice = 0.00;
 
-    public Double calculateMarkUpPrice(Double pricePerRoom, Integer numberOfAdults, Integer numberOfNights) {
+    public Double calculateMarkUpPrice( Double pricePerRoom, Integer numberOfAdults, Integer numberOfNights )
+    {
 
         cost = pricePerRoom * numberOfNights * numberOfAdults;
-        markedUpPrice = (cost * markUp) + cost;
+        markedUpPrice = ( cost * markUp ) + cost;
 
         return markedUpPrice;
     }

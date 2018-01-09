@@ -1,6 +1,7 @@
 package com.codegen.suntravels.entityResponses;
 
-public class ContractListResponse {
+public class ContractListResponse
+{
 
     private Integer contractID;
     private String hotelName;

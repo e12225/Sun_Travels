@@ -7,7 +7,8 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name = "SM_CONTRACT", schema = "SYS", catalog = "")
-public class Contract {
+public class Contract
+{
 
     @Id
     @GeneratedValue
@@ -17,24 +18,29 @@ public class Contract {
     @Column(name = "CTR_HOTEL_ID")
     private Integer hotelID;
 
-    public Integer getContractID() {
+    public Integer getContractID()
+    {
         return contractID;
     }
 
-    public void setContractID(Integer contractID) {
+    public void setContractID( Integer contractID )
+    {
         this.contractID = contractID;
     }
 
-    public Integer getHotelID() {
+    public Integer getHotelID()
+    {
         return hotelID;
     }
 
-    public void setHotelID(Integer hotelID) {
+    public void setHotelID( Integer hotelID )
+    {
         this.hotelID = hotelID;
     }
 
     @Override
-    public String toString() {
+    public String toString()
+    {
         return "Contract{" +
                 "contractID=" + contractID +
                 ", hotelID=" + hotelID +
@@ -42,19 +48,30 @@ public class Contract {
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+    public boolean equals( Object o )
+    {
+        if( this == o )
+        {
+            return true;
+        }
+        if( o == null || getClass() != o.getClass() )
+        {
+            return false;
+        }
 
         Contract contract = (Contract) o;
 
-        if (!contractID.equals(contract.contractID)) return false;
-        return hotelID.equals(contract.hotelID);
+        if( !contractID.equals( contract.contractID ) )
+        {
+            return false;
+        }
+        return hotelID.equals( contract.hotelID );
 
     }
 
     @Override
-    public int hashCode() {
+    public int hashCode()
+    {
         int result = contractID.hashCode();
         result = 31 * result + hotelID.hashCode();
         return result;

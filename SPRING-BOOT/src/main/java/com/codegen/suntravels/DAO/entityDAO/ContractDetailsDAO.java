@@ -11,32 +11,39 @@ import java.util.List;
  * Created by DELL on 11/15/2017.
  */
 @Component
-public class ContractDetailsDAO {
+public class ContractDetailsDAO
+{
 
     @Autowired
     private ContractDetailsRepository contractDetailsRepository;
 
-    public List<ContractDetails> getContractDetailsList(){
+    public List<ContractDetails> getContractDetailsList()
+    {
         return contractDetailsRepository.findAll();
     }
 
-    public List<ContractDetails> getCtrDetailsByCtrID(Integer contractID){
-        return contractDetailsRepository.getCtrDetailsListByCtrID(contractID);
+    public List<ContractDetails> getCtrDetailsByCtrID( Integer contractID )
+    {
+        return contractDetailsRepository.getCtrDetailsListByCtrID( contractID );
     }
 
-    public List<ContractDetails> getCtrDetailsByRoomTypeID(Integer roomTypeID){
+    public List<ContractDetails> getCtrDetailsByRoomTypeID( Integer roomTypeID )
+    {
         return contractDetailsRepository.getCtrDetailsByRoomTypeID( roomTypeID );
     }
 
-    public ContractDetails getCtrDetailsByRoomTypeIDandCtrID(Integer roomTypeID, Integer contractID){
-        return contractDetailsRepository.getCtrDetailsByRoomTypeIDandCtrID(roomTypeID, contractID);
+    public ContractDetails getCtrDetailsByRoomTypeIDandCtrID( Integer roomTypeID, Integer contractID )
+    {
+        return contractDetailsRepository.getCtrDetailsByRoomTypeIDandCtrID( roomTypeID, contractID );
     }
 
-    public void addContractDetails(ContractDetails contractDetails){
-        contractDetailsRepository.save(contractDetails);
+    public void addContractDetails( ContractDetails contractDetails )
+    {
+        contractDetailsRepository.save( contractDetails );
     }
 
-    public void updateContractDetails(ContractDetails contractDetails){
+    public void updateContractDetails( ContractDetails contractDetails )
+    {
         //TODO : complete this
     }
 }

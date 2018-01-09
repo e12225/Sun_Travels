@@ -4,7 +4,8 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "SM_CUSTOMER", schema = "SYS", catalog = "")
-public class Customer {
+public class Customer
+{
 
     @Id
     @GeneratedValue
@@ -29,81 +30,121 @@ public class Customer {
     @Column(name = "CUST_SSN_OR_NIC")
     private String ssnOrNic;
 
-    public Integer getCustomerID() {
+    public Integer getCustomerID()
+    {
         return customerID;
     }
 
-    public void setCustomerID(Integer customerID) {
+    public void setCustomerID( Integer customerID )
+    {
         this.customerID = customerID;
     }
 
-    public String getCustomerFirstName() {
+    public String getCustomerFirstName()
+    {
         return customerFirstName;
     }
 
-    public void setCustomerFirstName(String customerFirstName) {
+    public void setCustomerFirstName( String customerFirstName )
+    {
         this.customerFirstName = customerFirstName;
     }
 
-    public String getCustomerLastName() {
+    public String getCustomerLastName()
+    {
         return customerLastName;
     }
 
-    public void setCustomerLastName(String customerLastName) {
+    public void setCustomerLastName( String customerLastName )
+    {
         this.customerLastName = customerLastName;
     }
 
-    public Long getCustomerPhoneNumber() {
+    public Long getCustomerPhoneNumber()
+    {
         return customerPhoneNumber;
     }
 
-    public void setCustomerPhoneNumber(Long customerPhoneNumber) {
+    public void setCustomerPhoneNumber( Long customerPhoneNumber )
+    {
         this.customerPhoneNumber = customerPhoneNumber;
     }
 
-    public Integer getCountryID() {
+    public Integer getCountryID()
+    {
         return countryID;
     }
 
-    public void setCountryID(Integer countryID) {
+    public void setCountryID( Integer countryID )
+    {
         this.countryID = countryID;
     }
 
-    public Integer getCityID() {
+    public Integer getCityID()
+    {
         return cityID;
     }
 
-    public void setCityID(Integer cityID) {
+    public void setCityID( Integer cityID )
+    {
         this.cityID = cityID;
     }
 
-    public String getSsnOrNic() {
+    public String getSsnOrNic()
+    {
         return ssnOrNic;
     }
 
-    public void setSsnOrNic(String ssnOrNic) {
+    public void setSsnOrNic( String ssnOrNic )
+    {
         this.ssnOrNic = ssnOrNic;
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+    public boolean equals( Object o )
+    {
+        if( this == o )
+        {
+            return true;
+        }
+        if( o == null || getClass() != o.getClass() )
+        {
+            return false;
+        }
 
         Customer customer = (Customer) o;
 
-        if (!customerID.equals(customer.customerID)) return false;
-        if (!customerFirstName.equals(customer.customerFirstName)) return false;
-        if (!customerLastName.equals(customer.customerLastName)) return false;
-        if (!customerPhoneNumber.equals(customer.customerPhoneNumber)) return false;
-        if (!countryID.equals(customer.countryID)) return false;
-        if (!cityID.equals(customer.cityID)) return false;
-        return ssnOrNic.equals(customer.ssnOrNic);
+        if( !customerID.equals( customer.customerID ) )
+        {
+            return false;
+        }
+        if( !customerFirstName.equals( customer.customerFirstName ) )
+        {
+            return false;
+        }
+        if( !customerLastName.equals( customer.customerLastName ) )
+        {
+            return false;
+        }
+        if( !customerPhoneNumber.equals( customer.customerPhoneNumber ) )
+        {
+            return false;
+        }
+        if( !countryID.equals( customer.countryID ) )
+        {
+            return false;
+        }
+        if( !cityID.equals( customer.cityID ) )
+        {
+            return false;
+        }
+        return ssnOrNic.equals( customer.ssnOrNic );
 
     }
 
     @Override
-    public int hashCode() {
+    public int hashCode()
+    {
         int result = customerID.hashCode();
         result = 31 * result + customerFirstName.hashCode();
         result = 31 * result + customerLastName.hashCode();

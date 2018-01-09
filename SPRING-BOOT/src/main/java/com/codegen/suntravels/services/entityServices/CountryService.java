@@ -12,42 +12,50 @@ import java.util.List;
  * Created by DELL on 11/18/2017.
  */
 @Service
-public class CountryService {
+public class CountryService
+{
 
     @Autowired
     private CountryDAO countryDAO;
 
-    public List<Country> getCountryList() {
+    public List<Country> getCountryList()
+    {
         return this.countryDAO.getCountryList();
     }
 
-    public Country getCountryByID(Integer countryID) {
-        return this.countryDAO.getCountryByID(countryID);
+    public Country getCountryByID( Integer countryID )
+    {
+        return this.countryDAO.getCountryByID( countryID );
     }
 
-    public List<Country> getCountryByNameOrAlias(String countryName) {
-        return this.countryDAO.getCountryByNameOrAlias(countryName);
+    public List<Country> getCountryByNameOrAlias( String countryName )
+    {
+        return this.countryDAO.getCountryByNameOrAlias( countryName );
     }
 
-    public AddEntityResponse addCountry(Country country) {
+    public AddEntityResponse addCountry( Country country )
+    {
 
         AddEntityResponse response = new AddEntityResponse();
 
-        Country co = countryDAO.getCountryByName(country.getCountryName());
+        Country co = countryDAO.getCountryByName( country.getCountryName() );
 
-        if (co != null) {
+        if( co != null )
+        {
             /**
              * a country under the given name already exists
              */
-            response.setInsertingStatus(false);
-            response.setEntity(null);
-            response.setMessage("A country named " + country.getCountryName() + " already exists in the system");
-        } else {
-            countryDAO.addCountry(country);
+            response.setInsertingStatus( false );
+            response.setEntity( null );
+            response.setMessage( "A country named " + country.getCountryName() + " already exists in the system" );
+        }
+        else
+        {
+            countryDAO.addCountry( country );
 
-            response.setInsertingStatus(true);
-            response.setEntity(country);
-            response.setMessage("A new country successfully added to the system");
+            response.setInsertingStatus( true );
+            response.setEntity( country );
+            response.setMessage( "A new country successfully added to the system" );
         }
 
         return response;

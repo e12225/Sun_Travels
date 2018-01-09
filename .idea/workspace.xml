@@ -2,9 +2,61 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e9384999-9745-4827-996d-bc5c7d631c75" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/services/entityServices/CustomerService.java" afterPath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/services/entityServices/CustomerService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/DAO/entityDAO/CityDAO.java" afterPath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/DAO/entityDAO/CityDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/DAO/entityDAO/ContractDAO.java" afterPath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/DAO/entityDAO/ContractDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/DAO/entityDAO/ContractDetailsDAO.java" afterPath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/DAO/entityDAO/ContractDetailsDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/DAO/entityDAO/CountryDAO.java" afterPath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/DAO/entityDAO/CountryDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/DAO/entityDAO/CustomerDAO.java" afterPath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/DAO/entityDAO/CustomerDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/DAO/entityDAO/HotelDAO.java" afterPath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/DAO/entityDAO/HotelDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/DAO/entityDAO/RoomTypeDAO.java" afterPath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/DAO/entityDAO/RoomTypeDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/DAO/requestDAO/SearchRequestDAO.java" afterPath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/DAO/requestDAO/SearchRequestDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/SunTravelsApplication.java" afterPath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/SunTravelsApplication.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/controllers/entityControllers/CityController.java" afterPath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/controllers/entityControllers/CityController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/controllers/entityControllers/ContractController.java" afterPath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/controllers/entityControllers/ContractController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/controllers/entityControllers/ContractDetailsController.java" afterPath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/controllers/entityControllers/ContractDetailsController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/controllers/entityControllers/CountryController.java" afterPath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/controllers/entityControllers/CountryController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/controllers/entityControllers/CustomerController.java" afterPath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/controllers/entityControllers/CustomerController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/controllers/entityControllers/HotelController.java" afterPath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/controllers/entityControllers/HotelController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/controllers/entityControllers/RoomTypeController.java" afterPath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/controllers/entityControllers/RoomTypeController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/controllers/searchRequestControllers/SearchRequestController.java" afterPath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/controllers/searchRequestControllers/SearchRequestController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/entities/City.java" afterPath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/entities/City.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/entities/Contract.java" afterPath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/entities/Contract.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/entities/ContractDetails.java" afterPath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/entities/ContractDetails.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/entities/Country.java" afterPath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/entities/Country.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/entities/Customer.java" afterPath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/entities/Customer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/entities/Hotel.java" afterPath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/entities/Hotel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/entities/RoomType.java" afterPath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/entities/RoomType.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/entityRequests/AddCityRequest.java" afterPath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/entityRequests/AddCityRequest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/entityRequests/AddContractDetailsRequest.java" afterPath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/entityRequests/AddContractDetailsRequest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/entityRequests/AddContractRequest.java" afterPath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/entityRequests/AddContractRequest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/entityRequests/AddCustomerRequest.java" afterPath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/entityRequests/AddCustomerRequest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/entityRequests/AddHotelRequest.java" afterPath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/entityRequests/AddHotelRequest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/entityResponses/AddEntityResponse.java" afterPath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/entityResponses/AddEntityResponse.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/entityResponses/CityListResponse.java" afterPath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/entityResponses/CityListResponse.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/entityResponses/ContractDetailsListResponse.java" afterPath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/entityResponses/ContractDetailsListResponse.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/entityResponses/ContractListResponse.java" afterPath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/entityResponses/ContractListResponse.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/entityResponses/CustomerListResponse.java" afterPath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/entityResponses/CustomerListResponse.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/entityResponses/HotelListResponse.java" afterPath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/entityResponses/HotelListResponse.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/logics/ContractValidityChecker.java" afterPath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/logics/ContractValidityChecker.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/logics/MarkupCalculator.java" afterPath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/logics/MarkupCalculator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/logics/RoomsAvailabilityChecker.java" afterPath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/logics/RoomsAvailabilityChecker.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/repositories/CityRepository.java" afterPath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/repositories/CityRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/repositories/ContractDetailsRepository.java" afterPath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/repositories/ContractDetailsRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/repositories/ContractRepository.java" afterPath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/repositories/ContractRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/repositories/CountryRepository.java" afterPath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/repositories/CountryRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/repositories/CustomerRepository.java" afterPath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/repositories/CustomerRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/repositories/HotelRepository.java" afterPath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/repositories/HotelRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/repositories/RoomTypeRepository.java" afterPath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/repositories/RoomTypeRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/searchRequests/SearchReservationRequest.java" afterPath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/searchRequests/SearchReservationRequest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/services/entityServices/CityService.java" afterPath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/services/entityServices/CityService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/services/entityServices/ContractDetailsService.java" afterPath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/services/entityServices/ContractDetailsService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/services/entityServices/ContractService.java" afterPath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/services/entityServices/ContractService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/services/entityServices/CountryService.java" afterPath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/services/entityServices/CountryService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/services/entityServices/HotelService.java" afterPath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/services/entityServices/HotelService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/services/searchRequestServices/SearchRequestService.java" afterPath="$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/services/searchRequestServices/SearchRequestService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPRING-BOOT/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/SPRING-BOOT/src/main/resources/application.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPRING-BOOT/src/test/java/com/codegen/suntravels/SunTravelsApplicationTests.java" afterPath="$PROJECT_DIR$/SPRING-BOOT/src/test/java/com/codegen/suntravels/SunTravelsApplicationTests.java" />
     </list>
     <ignored path="$PROJECT_DIR$/SPRING-BOOT/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,7 +71,7 @@
       <file leaf-file-name="SunTravelsApplication.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/SunTravelsApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
+            <state relative-caret-position="102">
               <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding />
             </state>
@@ -29,8 +81,8 @@
       <file leaf-file-name="CustomerService.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/services/entityServices/CustomerService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="101" column="69" lean-forward="false" selection-start-line="101" selection-start-column="69" selection-end-line="101" selection-end-column="69" />
+            <state relative-caret-position="72">
+              <caret line="133" column="0" lean-forward="true" selection-start-line="133" selection-start-column="0" selection-end-line="133" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -39,7 +91,7 @@
       <file leaf-file-name="CityService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/services/entityServices/CityService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-221">
+            <state relative-caret-position="136">
               <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
               <folding />
             </state>
@@ -71,8 +123,9 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="938" />
-    <option name="width" value="984" />
+    <option name="x" value="635" />
+    <option name="y" value="2" />
+    <option name="width" value="985" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectView">
@@ -90,10 +143,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="Scratches" />
-      <pane id="Scope" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -161,10 +213,11 @@
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Sun_Travels_Front_End" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -304,6 +357,7 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="SFDX" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -311,17 +365,20 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3924192" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3924192" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Execute Anonymous" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2217484" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18603411" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Log Manager" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Salesforce" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -346,6 +403,54 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/services/entityServices/CityService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/services/entityServices/CustomerService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2091">
+          <caret line="136" column="56" lean-forward="true" selection-start-line="136" selection-start-column="56" selection-end-line="136" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/SunTravelsApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/services/entityServices/CityService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/services/entityServices/CustomerService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2006">
+          <caret line="131" column="57" lean-forward="true" selection-start-line="131" selection-start-column="57" selection-end-line="131" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/SunTravelsApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/services/entityServices/CustomerService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -356,7 +461,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/SunTravelsApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state relative-caret-position="102">
           <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding />
         </state>
@@ -366,15 +471,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding>
-            <element signature="e#1533#1534#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/services/entityServices/CityService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-221">
+        <state relative-caret-position="136">
           <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
           <folding />
         </state>
@@ -384,14 +487,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SPRING-BOOT/src/main/java/com/codegen/suntravels/services/entityServices/CustomerService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="101" column="69" lean-forward="false" selection-start-line="101" selection-start-column="69" selection-end-line="101" selection-end-column="69" />
+        <state relative-caret-position="72">
+          <caret line="133" column="0" lean-forward="true" selection-start-line="133" selection-start-column="0" selection-end-line="133" selection-end-column="0" />
           <folding />
         </state>
       </provider>

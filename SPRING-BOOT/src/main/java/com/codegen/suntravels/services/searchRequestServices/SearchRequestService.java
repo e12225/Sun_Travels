@@ -39,7 +39,8 @@ public class SearchRequestService
         {
             List<ContractDetails> contractDetailsList = contractDetailsDAO.getCtrDetailsByCtrID( contract.getContractID() );
 
-            if(contractDetailsList.size() != 0){
+            if( contractDetailsList.size() != 0 )
+            {
 
                 List<ContractDetails> validContractDetailsList = searchRequestDAO.getValidContractDetailsList( contractDetailsList, request );
 

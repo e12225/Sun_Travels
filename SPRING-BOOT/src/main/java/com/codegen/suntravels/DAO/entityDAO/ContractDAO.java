@@ -12,24 +12,29 @@ import java.util.List;
  * Created by DELL on 11/15/2017.
  */
 @Component
-public class ContractDAO {
+public class ContractDAO
+{
 
     @Autowired
     private ContractRepository contractRepository;
 
-    public List<Contract> getContractList(){
+    public List<Contract> getContractList()
+    {
         return contractRepository.findAll();
     }
 
-    public Contract getContractByID(Integer contractID){
-        return contractRepository.getContractByID(contractID);
+    public Contract getContractByID( Integer contractID )
+    {
+        return contractRepository.getContractByID( contractID );
     }
 
-    public List<Contract> getContractByHotelID( Integer hotelID){
-        return contractRepository.getContractByHotelID(hotelID);
+    public List<Contract> getContractByHotelID( Integer hotelID )
+    {
+        return contractRepository.getContractByHotelID( hotelID );
     }
 
-    public void addContract(Contract contract){
-        contractRepository.save(contract);
+    public void addContract( Contract contract )
+    {
+        contractRepository.save( contract );
     }
 }

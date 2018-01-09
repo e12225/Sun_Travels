@@ -1,5 +1,6 @@
 package com.codegen.suntravels.controllers.entityControllers;
 
+import com.codegen.suntravels.entities.City;
 import com.codegen.suntravels.entityRequests.AddCityRequest;
 import com.codegen.suntravels.entityResponses.AddEntityResponse;
 import com.codegen.suntravels.entityResponses.CityListResponse;
@@ -14,23 +15,33 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("cities")
-public class CityController {
+public class CityController
+{
 
     @Autowired
     private CityService cityService;
 
     @RequestMapping(method = RequestMethod.GET, path = "/list")
-    public List<CityListResponse> getCityList() {
+    public List<CityListResponse> getCityList()
+    {
         return cityService.getCityList();
     }
 
     @RequestMapping(method = RequestMethod.GET, path = "/listByName/{cityName}")
-    public List<CityListResponse> getCityByNameOrAlias(@PathVariable("cityName") String cityName) {
-        return cityService.getCityByNameOrAlias(cityName);
+    public List<CityListResponse> getCityByNameOrAlias( @PathVariable("cityName") String cityName )
+    {
+        return cityService.getCityByNameOrAlias( cityName );
     }
 
     @RequestMapping(method = RequestMethod.POST, path = "/add")
-    public AddEntityResponse addCity(@RequestBody AddCityRequest request) {
-        return cityService.addCity(request);
+    public AddEntityResponse addCity( @RequestBody AddCityRequest request )
+    {
+        return cityService.addCity( request );
+    }
+
+    @RequestMapping(method = RequestMethod.PUT, path = "/update/{cityID}")
+    public AddEntityResponse updateCity( @PathVariable("cityID") Integer cityID, @RequestBody AddCityRequest request )
+    {
+        return cityService.updateCity( request, cityID );
     }
 }

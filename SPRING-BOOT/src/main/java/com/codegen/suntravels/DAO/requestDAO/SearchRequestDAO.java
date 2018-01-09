@@ -12,7 +12,8 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 
 @Component
-public class SearchRequestDAO {
+public class SearchRequestDAO
+{
 
     @Autowired
     private ContractValidityChecker contractValidityChecker;
@@ -23,14 +24,16 @@ public class SearchRequestDAO {
     /**
      * filtering the list of valid contract details from the given list
      */
-    public List<ContractDetails> getValidContractDetailsList(List<ContractDetails> contractDetailsList, SearchReservationRequest request){
-        return contractValidityChecker.getValidContractDetailsList(contractDetailsList, request);
+    public List<ContractDetails> getValidContractDetailsList( List<ContractDetails> contractDetailsList, SearchReservationRequest request )
+    {
+        return contractValidityChecker.getValidContractDetailsList( contractDetailsList, request );
     }
 
     /**
      * filtering the list of available room type list from the valid contract list
      */
-    public List<AvailableReservationComposer> getRoomTypesWithEnoughRooms(List<ContractDetails> validContracts, SearchReservationRequest request, Contract contract){
-        return roomsAvailabilityChecker.getRoomsAvailability(validContracts, request, contract);
+    public List<AvailableReservationComposer> getRoomTypesWithEnoughRooms( List<ContractDetails> validContracts, SearchReservationRequest request, Contract contract )
+    {
+        return roomsAvailabilityChecker.getRoomsAvailability( validContracts, request, contract );
     }
 }

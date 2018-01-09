@@ -2,7 +2,8 @@ package com.codegen.suntravels.entityRequests;
 
 import java.sql.Date;
 
-public class AddContractDetailsRequest {
+public class AddContractDetailsRequest
+{
 
     private Integer contractID;
     private Date validFrom;

@@ -7,7 +7,8 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name = "SM_CITY", schema = "SYS", catalog = "")
-public class City {
+public class City
+{
 
     @Id
     @GeneratedValue
@@ -20,32 +21,39 @@ public class City {
     @Column(name = "CITY_NAME")
     private String cityName;
 
-    public Integer getCityID() {
+    public Integer getCityID()
+    {
         return cityID;
     }
 
-    public void setCityID(Integer cityID) {
+    public void setCityID( Integer cityID )
+    {
         this.cityID = cityID;
     }
 
-    public Integer getCountryID() {
+    public Integer getCountryID()
+    {
         return countryID;
     }
 
-    public void setCountryID(Integer countryID) {
+    public void setCountryID( Integer countryID )
+    {
         this.countryID = countryID;
     }
 
-    public String getCityName() {
+    public String getCityName()
+    {
         return cityName;
     }
 
-    public void setCityName(String cityName) {
+    public void setCityName( String cityName )
+    {
         this.cityName = cityName;
     }
 
     @Override
-    public String toString() {
+    public String toString()
+    {
         return "City{" +
                 "cityID=" + cityID +
                 ", countryID=" + countryID +
@@ -54,20 +62,34 @@ public class City {
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+    public boolean equals( Object o )
+    {
+        if( this == o )
+        {
+            return true;
+        }
+        if( o == null || getClass() != o.getClass() )
+        {
+            return false;
+        }
 
         City city = (City) o;
 
-        if (!cityID.equals(city.cityID)) return false;
-        if (!countryID.equals(city.countryID)) return false;
-        return cityName.equals(city.cityName);
+        if( !cityID.equals( city.cityID ) )
+        {
+            return false;
+        }
+        if( !countryID.equals( city.countryID ) )
+        {
+            return false;
+        }
+        return cityName.equals( city.cityName );
 
     }
 
     @Override
-    public int hashCode() {
+    public int hashCode()
+    {
         int result = cityID.hashCode();
         result = 31 * result + countryID.hashCode();
         result = 31 * result + cityName.hashCode();

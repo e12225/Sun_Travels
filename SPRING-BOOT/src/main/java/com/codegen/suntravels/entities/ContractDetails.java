@@ -8,7 +8,8 @@ import java.sql.Date;
  */
 @Entity
 @Table(name = "SM_CONTRACT_DETAILS", schema = "SYS", catalog = "")
-public class ContractDetails {
+public class ContractDetails
+{
 
     @Id
     @GeneratedValue
@@ -36,72 +37,91 @@ public class ContractDetails {
     @Column(name = "CTR_PRICE")
     private Double price;
 
-    public Integer getContractDetailsID() {
+    //TODO : add the version column here and in the table as well
+
+    public Integer getContractDetailsID()
+    {
         return contractDetailsID;
     }
 
-    public void setContractDetailsID(Integer contractDetailsID) {
+    public void setContractDetailsID( Integer contractDetailsID )
+    {
         this.contractDetailsID = contractDetailsID;
     }
 
-    public Integer getContractID() {
+    public Integer getContractID()
+    {
         return contractID;
     }
 
-    public void setContractID(Integer contractID) {
+    public void setContractID( Integer contractID )
+    {
         this.contractID = contractID;
     }
 
-    public Date getValidFrom() {
+    public Date getValidFrom()
+    {
         return validFrom;
     }
 
-    public void setValidFrom(Date validFrom) {
+    public void setValidFrom( Date validFrom )
+    {
         this.validFrom = validFrom;
     }
 
-    public Date getValidTo() {
+    public Date getValidTo()
+    {
         return validTo;
     }
 
-    public void setValidTo(Date validTo) {
+    public void setValidTo( Date validTo )
+    {
         this.validTo = validTo;
     }
 
-    public Integer getRoomTypeID() {
+    public Integer getRoomTypeID()
+    {
         return roomTypeID;
     }
 
-    public void setRoomTypeID(Integer roomTypeID) {
+    public void setRoomTypeID( Integer roomTypeID )
+    {
         this.roomTypeID = roomTypeID;
     }
 
-    public Integer getNumberOfRooms() {
+    public Integer getNumberOfRooms()
+    {
         return numberOfRooms;
     }
 
-    public void setNumberOfRooms(Integer numberOfRooms) {
+    public void setNumberOfRooms( Integer numberOfRooms )
+    {
         this.numberOfRooms = numberOfRooms;
     }
 
-    public Integer getMaxAdults() {
+    public Integer getMaxAdults()
+    {
         return maxAdults;
     }
 
-    public void setMaxAdults(Integer maxAdults) {
+    public void setMaxAdults( Integer maxAdults )
+    {
         this.maxAdults = maxAdults;
     }
 
-    public Double getPrice() {
+    public Double getPrice()
+    {
         return price;
     }
 
-    public void setPrice(Double price) {
+    public void setPrice( Double price )
+    {
         this.price = price;
     }
 
     @Override
-    public String toString() {
+    public String toString()
+    {
         return "ContractDetails{" +
                 "contractDetailsID=" + contractDetailsID +
                 ", contractID=" + contractID +
@@ -115,21 +135,41 @@ public class ContractDetails {
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+    public boolean equals( Object o )
+    {
+        if( this == o )
+        {
+            return true;
+        }
+        if( o == null || getClass() != o.getClass() )
+        {
+            return false;
+        }
 
         ContractDetails that = (ContractDetails) o;
 
-        if (!contractDetailsID.equals(that.contractDetailsID)) return false;
-        if (!contractID.equals(that.contractID)) return false;
-        if (!roomTypeID.equals(that.roomTypeID)) return false;
-        if (!numberOfRooms.equals(that.numberOfRooms)) return false;
-        return maxAdults.equals(that.maxAdults);
+        if( !contractDetailsID.equals( that.contractDetailsID ) )
+        {
+            return false;
+        }
+        if( !contractID.equals( that.contractID ) )
+        {
+            return false;
+        }
+        if( !roomTypeID.equals( that.roomTypeID ) )
+        {
+            return false;
+        }
+        if( !numberOfRooms.equals( that.numberOfRooms ) )
+        {
+            return false;
+        }
+        return maxAdults.equals( that.maxAdults );
     }
 
     @Override
-    public int hashCode() {
+    public int hashCode()
+    {
         int result = contractDetailsID.hashCode();
         result = 31 * result + contractID.hashCode();
         result = 31 * result + roomTypeID.hashCode();

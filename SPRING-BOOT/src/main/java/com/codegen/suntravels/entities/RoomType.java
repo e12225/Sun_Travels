@@ -4,7 +4,8 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "SM_ROOM_TYPE", schema = "SYS", catalog = "")
-public class RoomType {
+public class RoomType
+{
 
     @Id
     @GeneratedValue
@@ -14,24 +15,29 @@ public class RoomType {
     @Column(name = "RM_TYPE_NAME")
     private String roomTypeName;
 
-    public Integer getRoomTypeID() {
+    public Integer getRoomTypeID()
+    {
         return roomTypeID;
     }
 
-    public void setRoomTypeID(Integer roomTypeID) {
+    public void setRoomTypeID( Integer roomTypeID )
+    {
         this.roomTypeID = roomTypeID;
     }
 
-    public String getRoomTypeName() {
+    public String getRoomTypeName()
+    {
         return roomTypeName;
     }
 
-    public void setRoomTypeName(String roomTypeName) {
+    public void setRoomTypeName( String roomTypeName )
+    {
         this.roomTypeName = roomTypeName;
     }
 
     @Override
-    public String toString() {
+    public String toString()
+    {
         return "RoomType{" +
                 "roomTypeID=" + roomTypeID +
                 ", roomTypeName='" + roomTypeName + '\'' +
@@ -39,18 +45,29 @@ public class RoomType {
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+    public boolean equals( Object o )
+    {
+        if( this == o )
+        {
+            return true;
+        }
+        if( o == null || getClass() != o.getClass() )
+        {
+            return false;
+        }
 
         RoomType roomType = (RoomType) o;
 
-        if (!roomTypeID.equals(roomType.roomTypeID)) return false;
-        return roomTypeName.equals(roomType.roomTypeName);
+        if( !roomTypeID.equals( roomType.roomTypeID ) )
+        {
+            return false;
+        }
+        return roomTypeName.equals( roomType.roomTypeName );
     }
 
     @Override
-    public int hashCode() {
+    public int hashCode()
+    {
         int result = roomTypeID.hashCode();
         result = 31 * result + roomTypeName.hashCode();
         return result;

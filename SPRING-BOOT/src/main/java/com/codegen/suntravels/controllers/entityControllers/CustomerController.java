@@ -11,29 +11,34 @@ import java.util.List;
 
 @RestController
 @RequestMapping(value = "customers")
-public class CustomerController {
+public class CustomerController
+{
 
     @Autowired
     private CustomerService customerService;
 
     @RequestMapping(method = RequestMethod.GET, path = "/list")
-    public List<CustomerListResponse> getCustomerList(){
+    public List<CustomerListResponse> getCustomerList()
+    {
         return customerService.getCustomerList();
     }
 
     @RequestMapping(method = RequestMethod.GET, path = "/listByName/{customerName}")
-    public List<CustomerListResponse> getCustomerByNameOrAlias(@PathVariable("customerName") String customerName){
-        return customerService.getCustomerByNameOrAlias(customerName);
+    public List<CustomerListResponse> getCustomerByNameOrAlias( @PathVariable("customerName") String customerName )
+    {
+        return customerService.getCustomerByNameOrAlias( customerName );
     }
 
     @RequestMapping(method = RequestMethod.GET, path = "/listByIdentity/{identity}")
-    public CustomerListResponse getCustomerByIdentity(@PathVariable("identity") String identity){
-        return customerService.getCustomerByIdentity(identity);
+    public CustomerListResponse getCustomerByIdentity( @PathVariable("identity") String identity )
+    {
+        return customerService.getCustomerByIdentity( identity );
     }
 
     @RequestMapping(method = RequestMethod.POST, path = "/add")
-    public AddEntityResponse addCustomer(@RequestBody AddCustomerRequest request){
-        return customerService.addCustomer(request);
+    public AddEntityResponse addCustomer( @RequestBody AddCustomerRequest request )
+    {
+        return customerService.addCustomer( request );
     }
 
 }

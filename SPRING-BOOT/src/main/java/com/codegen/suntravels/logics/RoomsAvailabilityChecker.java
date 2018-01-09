@@ -19,7 +19,8 @@ import java.util.List;
  * Created by DELL on 11/19/2017.
  */
 @Component
-public class RoomsAvailabilityChecker {
+public class RoomsAvailabilityChecker
+{
 
     @Autowired
     private RoomTypeDAO roomTypeDAO;
@@ -33,7 +34,8 @@ public class RoomsAvailabilityChecker {
     @Autowired
     private MarkupCalculator markupCalculator;
 
-    public List<AvailableReservationComposer> getRoomsAvailability(List<ContractDetails> validCtrDetailsList, SearchReservationRequest request, Contract contract) {
+    public List<AvailableReservationComposer> getRoomsAvailability( List<ContractDetails> validCtrDetailsList, SearchReservationRequest request, Contract contract )
+    {
 
         List<AvailableReservationComposer> availableReservations = new ArrayList<>();
 
@@ -51,31 +53,32 @@ public class RoomsAvailabilityChecker {
         Integer numberOfRooms;
         Integer maxAdultsPerRoom;
 
-        for (ContractDetails ctrDetails : validCtrDetailsList) {
+        for( ContractDetails ctrDetails : validCtrDetailsList )
+        {
 
             numberOfRooms = ctrDetails.getNumberOfRooms();
             maxAdultsPerRoom = ctrDetails.getMaxAdults();
 
-            if (requiredRoomCount <= numberOfRooms && requestedMaxAdultsPerRoom <= maxAdultsPerRoom &&
-                    (numberOfRooms * maxAdultsPerRoom) >= totalAdults && // checking availability of rooms for the total no of adults
-                    (requiredRoomCount * requestedMaxAdultsPerRoom) >= totalAdults) // checking the validity of request
+            if( requiredRoomCount <= numberOfRooms && requestedMaxAdultsPerRoom <= maxAdultsPerRoom &&
+                    ( numberOfRooms * maxAdultsPerRoom ) >= totalAdults && // checking availability of rooms for the total no of adults
+                    ( requiredRoomCount * requestedMaxAdultsPerRoom ) >= totalAdults ) // checking the validity of request
             {
                 /**
                  * The room type is available
                  */
                 AvailableReservationComposer reservation = new AvailableReservationComposer();
 
-                RoomType availableRoomType = roomTypeDAO.getRoomTypeByID(ctrDetails.getRoomTypeID());
-                Hotel relevantHotel = hotelDAO.getHotelByID(contract.getHotelID());
+                RoomType availableRoomType = roomTypeDAO.getRoomTypeByID( ctrDetails.getRoomTypeID() );
+                Hotel relevantHotel = hotelDAO.getHotelByID( contract.getHotelID() );
 
-                Double markedUpPrice = markupCalculator.calculateMarkUpPrice(ctrDetails.getPrice(), totalAdults, request.getNumberOfNights());
+                Double markedUpPrice = markupCalculator.calculateMarkUpPrice( ctrDetails.getPrice(), totalAdults, request.getNumberOfNights() );
 
-                reservation.setRoomType(availableRoomType.getRoomTypeName());
-                reservation.setMarkedUpPrice(markedUpPrice);
-                reservation.setHotelName(relevantHotel.getHotelName());
-                reservation.setRoomsAvailability("Available");
+                reservation.setRoomType( availableRoomType.getRoomTypeName() );
+                reservation.setMarkedUpPrice( markedUpPrice );
+                reservation.setHotelName( relevantHotel.getHotelName() );
+                reservation.setRoomsAvailability( "Available" );
 
-                availableReservations.add(reservation);
+                availableReservations.add( reservation );
             }
         }
         return availableReservations;

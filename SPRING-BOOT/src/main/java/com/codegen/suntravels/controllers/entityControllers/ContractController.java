@@ -18,33 +18,39 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("contracts")
-public class ContractController {
+public class ContractController
+{
 
     @Autowired
     private ContractService contractService;
 
     @RequestMapping(method = RequestMethod.GET, path = "/list")
-    public List<ContractListResponse> getContractList(){
+    public List<ContractListResponse> getContractList()
+    {
         return contractService.getContractList();
     }
 
     @RequestMapping(method = RequestMethod.GET, path = "/list/{contractID}")
-    public ContractListResponse getContractByID(@PathVariable("contractID") Integer contractID){
-        return contractService.getContractByID(contractID);
+    public ContractListResponse getContractByID( @PathVariable("contractID") Integer contractID )
+    {
+        return contractService.getContractByID( contractID );
     }
 
     @RequestMapping(method = RequestMethod.GET, path = "/listByHotelID/{hotelID}")
-    public List<ContractListResponse> getContractByHotelID(@PathVariable("hotelID") Integer hotelID){
-        return contractService.getContractByHotelID(hotelID);
+    public List<ContractListResponse> getContractByHotelID( @PathVariable("hotelID") Integer hotelID )
+    {
+        return contractService.getContractByHotelID( hotelID );
     }
 
     @RequestMapping(method = RequestMethod.GET, path = "/listByHotelName/{hotelName}")
-    public List<ContractListResponse> getContractsByHotelName( @PathVariable("hotelName") String hotelName){
-        return contractService.getContractByHotelName(hotelName);
+    public List<ContractListResponse> getContractsByHotelName( @PathVariable("hotelName") String hotelName )
+    {
+        return contractService.getContractByHotelName( hotelName );
     }
 
     @RequestMapping(method = RequestMethod.POST, path = "/add")
-    public AddEntityResponse addContract( @RequestBody AddContractRequest request){
-        return contractService.addContract(request);
+    public AddEntityResponse addContract( @RequestBody AddContractRequest request )
+    {
+        return contractService.addContract( request );
     }
 }

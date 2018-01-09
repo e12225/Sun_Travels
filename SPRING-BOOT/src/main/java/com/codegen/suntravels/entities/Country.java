@@ -7,7 +7,8 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name = "SM_COUNTRY", schema = "SYS", catalog = "")
-public class Country {
+public class Country
+{
 
     @Id
     @GeneratedValue
@@ -17,24 +18,29 @@ public class Country {
     @Column(name = "COUNTRY_NAME")
     private String countryName;
 
-    public Integer getCountryID() {
+    public Integer getCountryID()
+    {
         return countryID;
     }
 
-    public void setCountryID(Integer countryID) {
+    public void setCountryID( Integer countryID )
+    {
         this.countryID = countryID;
     }
 
-    public String getCountryName() {
+    public String getCountryName()
+    {
         return countryName;
     }
 
-    public void setCountryName(String countryName) {
+    public void setCountryName( String countryName )
+    {
         this.countryName = countryName;
     }
 
     @Override
-    public String toString() {
+    public String toString()
+    {
         return "Country{" +
                 "countryID=" + countryID +
                 ", countryName='" + countryName + '\'' +
@@ -42,19 +48,30 @@ public class Country {
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+    public boolean equals( Object o )
+    {
+        if( this == o )
+        {
+            return true;
+        }
+        if( o == null || getClass() != o.getClass() )
+        {
+            return false;
+        }
 
         Country country = (Country) o;
 
-        if (!countryID.equals(country.countryID)) return false;
-        return countryName.equals(country.countryName);
+        if( !countryID.equals( country.countryID ) )
+        {
+            return false;
+        }
+        return countryName.equals( country.countryName );
 
     }
 
     @Override
-    public int hashCode() {
+    public int hashCode()
+    {
         int result = countryID.hashCode();
         result = 31 * result + countryName.hashCode();
         return result;

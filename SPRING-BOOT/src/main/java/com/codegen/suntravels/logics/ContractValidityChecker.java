@@ -8,11 +8,13 @@ import java.sql.Date;
 import java.util.*;
 
 @Component
-public class ContractValidityChecker {
+public class ContractValidityChecker
+{
 
     Calendar c = Calendar.getInstance();
 
-    public List<ContractDetails> getValidContractDetailsList(List<ContractDetails> contractDetailsList, SearchReservationRequest request){
+    public List<ContractDetails> getValidContractDetailsList( List<ContractDetails> contractDetailsList, SearchReservationRequest request )
+    {
 
         List<ContractDetails> validContractDetailsList = new ArrayList<>();
 
@@ -21,7 +23,7 @@ public class ContractValidityChecker {
          * are also valid, because the given contract details list belong to the same contract.
          * So, no need to iterate through the entire contract details list to confirm the validity.
          */
-        ContractDetails firstElement = contractDetailsList.get(0);
+        ContractDetails firstElement = contractDetailsList.get( 0 );
 
         Date from = firstElement.getValidFrom();
         Date to = firstElement.getValidTo();
@@ -31,21 +33,23 @@ public class ContractValidityChecker {
         /**
          * Calculating the checkOut date using number of nights and the checkIn date
          * */
-        c.setTime(checkIn);
-        c.add(Calendar.DATE, numberOfNights);
-        Date checkOut = new Date(c.getTimeInMillis());
+        c.setTime( checkIn );
+        c.add( Calendar.DATE, numberOfNights );
+        Date checkOut = new Date( c.getTimeInMillis() );
 
-        boolean isValidContract = isValid(from, to, checkIn, checkOut);
+        boolean isValidContract = isValid( from, to, checkIn, checkOut );
 
-        if(isValidContract){
+        if( isValidContract )
+        {
             validContractDetailsList = contractDetailsList;
         }
         return validContractDetailsList;
     }
 
-    boolean isValid(Date from, Date to, Date checkIn, Date checkOut){
+    boolean isValid( Date from, Date to, Date checkIn, Date checkOut )
+    {
 
-        boolean validity = (checkIn.after(from) && checkIn.before(to)) && (checkOut.after(from) && checkOut.before(to));
+        boolean validity = ( checkIn.after( from ) && checkIn.before( to ) ) && ( checkOut.after( from ) && checkOut.before( to ) );
         return validity;
     }
 }

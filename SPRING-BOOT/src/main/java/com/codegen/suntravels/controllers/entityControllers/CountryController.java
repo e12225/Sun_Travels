@@ -13,23 +13,27 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("countries")
-public class CountryController {
+public class CountryController
+{
 
     @Autowired
     private CountryService countryService;
 
     @RequestMapping(method = RequestMethod.GET, path = "/list")
-    public List<Country> getCountryList(){
+    public List<Country> getCountryList()
+    {
         return countryService.getCountryList();
     }
 
     @RequestMapping(method = RequestMethod.GET, path = "/listByName/{countryName}")
-    public List<Country> getCountryByNameOrAlias(@PathVariable("countryName") String countryName){
-        return countryService.getCountryByNameOrAlias(countryName);
+    public List<Country> getCountryByNameOrAlias( @PathVariable("countryName") String countryName )
+    {
+        return countryService.getCountryByNameOrAlias( countryName );
     }
 
     @RequestMapping(method = RequestMethod.POST, path = "/add")
-    public AddEntityResponse addCountry(@RequestBody Country country){
-        return countryService.addCountry(country);
+    public AddEntityResponse addCountry( @RequestBody Country country )
+    {
+        return countryService.addCountry( country );
     }
 }
